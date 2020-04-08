@@ -60,11 +60,3 @@ export default class NavigationBar extends Component {
         )
     }
 }
-
-// const NavigationBar = () => {
-//   return (
-    
-//   );
-// }
-
-// export default NavigationBar;

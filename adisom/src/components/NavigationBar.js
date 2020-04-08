@@ -1,0 +1,70 @@
+import React, { useState } from 'react';
+import {Component} from 'react';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText
+} from 'reactstrap';
+
+export default class NavigationBar extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {}
+    }
+    
+    render() {
+        return(
+            <div>
+      <Navbar color="light" light expand="md">
+        <NavbarBrand href="/">Home</NavbarBrand>
+        <NavbarToggler /> 
+        <Collapse isOpen={true} navbar>
+          <Nav className="mr-auto" navbar>
+            <NavItem>
+              <NavLink href="/components/">About Us</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="https://github.com/reactstrap/reactstrap">Our Work</NavLink>
+            </NavItem>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                Some more Options
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>
+                  Option 1
+                </DropdownItem>
+                <DropdownItem>
+                  Option 2
+                </DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem>
+                  Reset
+                </DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+          </Nav>
+          <NavbarText>Booked for Logo</NavbarText>
+        </Collapse>
+      </Navbar>
+    </div>
+        )
+    }
+}
+
+// const NavigationBar = () => {
+//   return (
+    
+//   );
+// }
+
+// export default NavigationBar;

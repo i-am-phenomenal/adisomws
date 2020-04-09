@@ -30,7 +30,7 @@ export default class NavigationBar extends Component {
         <Collapse isOpen={true} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">About Us</NavLink>
+              <NavLink href="/about_us/">About Us</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="https://github.com/reactstrap/reactstrap">Our Work</NavLink>
@@ -53,7 +53,7 @@ export default class NavigationBar extends Component {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Booked for Logo</NavbarText>
+          <NavbarText>Reserved for Logo</NavbarText>
         </Collapse>
       </Navbar>
     </div>

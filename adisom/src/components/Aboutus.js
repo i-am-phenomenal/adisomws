@@ -190,16 +190,17 @@ export default class AboutUsView extends Component {
     }
 
     renderSideMenuOptions = () => {
+        let currentElement = this.state.activeElement;
         return(
         <div>
             <p />
             <h3> {this.renderSideMenuTitle()}</h3>
             <ListGroup>
-            <ListGroupItem id="genesis" tag="button" onClick={e => this.handleClick(e)} action>Genesis</ListGroupItem>
-                <ListGroupItem id="vision" active={false} tag="button" onClick={e => this.handleClick(e)} action>Our Vision</ListGroupItem>
-                <ListGroupItem id="mission" tag="button" onClick={e => this.handleClick(e)} action>Our Mission</ListGroupItem>
-                <ListGroupItem id="people" tag="button" onClick={e => this.handleClick(e)} action>People Behind ADISOM </ListGroupItem>
-                <ListGroupItem id="approach" tag="button" onClick={e => this.handleClick(e)} action>Approach</ListGroupItem>
+                <ListGroupItem id="genesis" active={currentElement == "genesis"} tag="button" onClick={e => this.handleClick(e)} action>Genesis</ListGroupItem>
+                <ListGroupItem id="vision" active={currentElement == "vision"} tag="button" onClick={e => this.handleClick(e)} action>Our Vision</ListGroupItem>
+                <ListGroupItem id="mission" active={currentElement == "mission"} tag="button" onClick={e => this.handleClick(e)} action>Our Mission</ListGroupItem>
+                <ListGroupItem id="people" active={currentElement == "people"} tag="button" onClick={e => this.handleClick(e)} action>People Behind ADISOM </ListGroupItem>
+                <ListGroupItem id="approach" active={currentElement == "approach"} tag="button" onClick={e => this.handleClick(e)} action>Approach</ListGroupItem>
             </ListGroup>
         </div>
         )

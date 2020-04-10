@@ -2,6 +2,11 @@ import React, {Component} from 'react';
 import { 
     Jumbotron, 
     Button,
+    Carousel,
+    CarouselItem,
+    CarouselControl,
+    CarouselIndicators,
+    CarouselCaption,
     Container,
     Row,
     Card,
@@ -15,7 +20,7 @@ import {
     CardSubtitle
 }
 from 'reactstrap';
-
+import CarouselView from './CarouselView';
 export default class OurWorkView extends Component {
         constructor(props) {
             super(props);
@@ -24,7 +29,9 @@ export default class OurWorkView extends Component {
 
         render() {
             return(
-                <p> Our Work VIew </p> 
+                <div> 
+                    <CarouselView />
+                </div> 
             )
         }
 }

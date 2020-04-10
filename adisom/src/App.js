@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import NavigationBar from './components/NavigationBar';
+import NavigationBar from './components/NavigationBar/NavigationBar.component';
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,6 +9,7 @@ import {
   Link
 } from "react-router-dom";
 import AboutUsView from "./components/Aboutus";
+import Header from './components/Header/Header.component';
 
 export default class App extends Component {
       constructor(props) {
@@ -22,22 +23,27 @@ export default class App extends Component {
 
       renderSwitch = () => {
         return(
-          <Router> 
-            <Switch> 
-              <Route path="/about_us/"> 
-                <AboutUsView /> 
+          <Router>
+            <Switch>
+              <Route path="/about_us/">
+                <AboutUsView />
               </Route>
             </Switch>
           </Router>
         )
       }
 
+      renderHeader = () => {
+        return(<Header /> )
+      }
+
       render() {
         return(
-          <div> 
+          <div>
             {this.renderNavBar()}
+            {this.renderHeader()}
             {this.renderSwitch()}
-          </div> 
+          </div>
         )
       }
 }

@@ -9,6 +9,7 @@ import {
   Link
 } from "react-router-dom";
 import AboutUsView from "./components/Aboutus";
+import OurWorkView from "./components/OurWork";
 import Header from './components/Header/Header.component';
 
 export default class App extends Component {
@@ -28,6 +29,9 @@ export default class App extends Component {
               <Route path="/about_us/">
                 <AboutUsView />
               </Route>
+              <Route path="/our_work/"> 
+                <OurWorkView /> 
+              </Route> 
             </Switch>
           </Router>
         )

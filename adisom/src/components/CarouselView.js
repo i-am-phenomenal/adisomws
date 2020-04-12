@@ -3,6 +3,11 @@ import {
     Carousel,
     CarouselItem,
     CarouselControl,
+    Container,
+    Row,
+    ListGroup,
+    ListGroupItem,
+    Col,
     CarouselIndicators,
     CarouselCaption,
     UncontrolledCarousel 
@@ -37,55 +42,98 @@ export default class CarouselView extends Component {
         }
     }
 
-    generateImagePath = (name) => {
-        let path = "/assets/images/Adisom/" + name + ".png";
-        console.log(path, "  @@@@@@@")
-        return path  //WIP 
-    }
-
     renderImages = () => {
         return(
             <div>   
-                {this.state.imageNames.map(item => 
                     <MDBCarouselItem itemId="1">
                     <MDBView>
                       <img
                         className="d-block w-100"
-                        src={this.generateImagePath(item)}
+                        src = "/assets/images/Adisom/w_1.jpg"
                         alt="First slide"
                       />
                     </MDBView>
                   </MDBCarouselItem>        
-                )}
                 
-                {/* <MDBCarouselItem itemId="2">
-                  <MDBView>
-                    <img
-                      className="d-block w-100"
-                      src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg"
-                      alt="Second slide"
-                    />
-                  </MDBView>
-                </MDBCarouselItem>
-                <MDBCarouselItem itemId="3">
-                  <MDBView>
-                    <img
-                      className="d-block w-100"
-                      src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
-                      alt="Third slide"
-                    />
-                  </MDBView>
-                </MDBCarouselItem> */}
+                  <MDBCarouselItem itemId="2">
+                    <MDBView>
+                      <img
+                        className="d-block w-100"
+                        src = "/assets/images/Adisom/w_2.jpg"
+                        alt="First slide"
+                      />
+                    </MDBView>
+                  </MDBCarouselItem>
+
+                  <MDBCarouselItem itemId="3">
+                    <MDBView>
+                      <img
+                        className="d-block w-100"
+                        src = "/assets/images/Adisom/w_3.jpg"
+                        alt="First slide"
+                      />
+                    </MDBView>
+                  </MDBCarouselItem>
+
+                  <MDBCarouselItem itemId="4">
+                    <MDBView>
+                      <img
+                        className="d-block w-100"
+                        src = "/assets/images/Adisom/w_4.jpg"
+                        alt="First slide"
+                      />
+                    </MDBView>
+                  </MDBCarouselItem>
+
+                  <MDBCarouselItem itemId="5">
+                    <MDBView>
+                      <img
+                        className="d-block w-100"
+                        src = "/assets/images/Adisom/w_5.jpg"
+                        alt="First slide"
+                      />
+                    </MDBView>
+                  </MDBCarouselItem>
+
+                  <MDBCarouselItem itemId="6">
+                    <MDBView>
+                      <img
+                        className="d-block w-100"
+                        src = "/assets/images/Adisom/w_6.jpg"
+                        alt="First slide"
+                      />
+                    </MDBView>
+                  </MDBCarouselItem>
+
+                  <MDBCarouselItem itemId="7">
+                    <MDBView>
+                      <img
+                        className="d-block w-100"
+                        src = "/assets/images/Adisom/w_7.jpg"
+                        alt="First slide"
+                      />
+                    </MDBView>
+                  </MDBCarouselItem>
+
+                  <MDBCarouselItem itemId="8">
+                    <MDBView>
+                      <img
+                        className="d-block w-100"
+                        src = "/assets/images/Adisom/w_8.jpg"
+                        alt="First slide"
+                      />
+                    </MDBView>
+                  </MDBCarouselItem>
             </div> 
         )
     }
 
     renderCarousel = () => {
         return(
-            <MDBContainer>
+            <MDBContainer style={{height: "30%", width: "60%"}}>
             <MDBCarousel
               activeItem={1}
-              length={3}
+              length={8}
               showControls={true}
               showIndicators={true}
               className="z-depth-1"
@@ -98,11 +146,35 @@ export default class CarouselView extends Component {
         );
     }
 
+    renderSideMenu = () => {
+      return(
+        <div> 
+             <p />
+            {/* <h3> {this.renderSideMenuTitle()}</h3> */}
+            <ListGroup>
+                <ListGroupItem id="genesis"   tag="button" action>Overview</ListGroupItem>
+                <ListGroupItem id="vision"  tag="button" action>Disaster Response</ListGroupItem>
+                <ListGroupItem id="mission"  tag="button" action>Health </ListGroupItem>
+                <ListGroupItem id="people"  tag="button" action>People Behind ADISOM </ListGroupItem>
+                <ListGroupItem id="approach"  tag="button" action>Approach</ListGroupItem>
+            </ListGroup>
+          </div> 
+      )
+    }
+
     render () {
         return(
-            <div> 
-                {this.renderCarousel()}
-                </div> 
+          <div> 
+            <br /> 
+            <br /> 
+            <br /> 
+              <Container> 
+                    <Row> 
+                        <Col xs="3"> {this.renderSideMenu()} </Col> 
+                        <Col xs="9"> {this.renderCarousel()} </Col> 
+                    </Row>                       
+                </Container>
+          </div> 
         )
     }
 }

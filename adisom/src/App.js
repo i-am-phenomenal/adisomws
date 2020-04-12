@@ -32,6 +32,9 @@ export default class App extends Component {
               <Route path="/our_work/"> 
                 <OurWorkView /> 
               </Route> 
+              <Route path="/disaster_response/"> 
+                <AboutUsView /> 
+              </Route> 
             </Switch>
           </Router>
         )

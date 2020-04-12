@@ -15,6 +15,7 @@ import {
     CardSubtitle
 }
 from 'reactstrap';
+import SideMenu from './SideMenu';
 
 export default class AboutUsView extends Component {
     constructor(props) {
@@ -184,9 +185,8 @@ export default class AboutUsView extends Component {
         )
     }
 
-    handleClick = (event) => {
-        event.preventDefault();
-        this.setState({activeElement: event.target.id});
+    handleClick = element => {
+        this.setState({activeElement: element});
     }
 
     renderSideMenuOptions = () => {
@@ -195,13 +195,10 @@ export default class AboutUsView extends Component {
         <div>
             <p />
             <h3> {this.renderSideMenuTitle()}</h3>
-            <ListGroup>
-                <ListGroupItem id="genesis" active={currentElement == "genesis"} tag="button" onClick={e => this.handleClick(e)} action>Genesis</ListGroupItem>
-                <ListGroupItem id="vision" active={currentElement == "vision"} tag="button" onClick={e => this.handleClick(e)} action>Our Vision</ListGroupItem>
-                <ListGroupItem id="mission" active={currentElement == "mission"} tag="button" onClick={e => this.handleClick(e)} action>Our Mission</ListGroupItem>
-                <ListGroupItem id="people" active={currentElement == "people"} tag="button" onClick={e => this.handleClick(e)} action>People Behind ADISOM </ListGroupItem>
-                <ListGroupItem id="approach" active={currentElement == "approach"} tag="button" onClick={e => this.handleClick(e)} action>Approach</ListGroupItem>
-            </ListGroup>
+            <SideMenu 
+                args={["genesis", "vision", "mission", "people", "approach"]}
+                onClickAction={this.handleClick}
+            />
         </div>
         )
     }

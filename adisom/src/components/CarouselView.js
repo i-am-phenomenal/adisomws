@@ -6,6 +6,8 @@ import {
     Container,
     Row,
     ListGroup,
+    Card,
+    CardBody,
     ListGroupItem,
     Col,
     CarouselIndicators,
@@ -13,8 +15,14 @@ import {
     UncontrolledCarousel 
 }
 from "reactstrap";
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer } from
-"mdbreact";
+import { 
+  MDBCarousel, 
+  MDBCarouselInner, 
+  MDBCarouselItem, 
+  MDBView, 
+  MDBContainer 
+} from "mdbreact";
+import SideMenu  from './SideMenu';
 
 export default class CarouselView extends Component {
     constructor(props) {
@@ -39,6 +47,7 @@ export default class CarouselView extends Component {
                 "w_16", 
                 "w_17"
             ],  
+            currentElement: "overview",
         }
     }
 
@@ -146,18 +155,37 @@ export default class CarouselView extends Component {
         );
     }
 
+    handleSideMenuClick = (event) => {
+      event.preventDefault();
+
+    }
+
+    handleOnClick = element => {
+      this.setState({currentElement: element});
+    }
+
+
+    renderSideMenuTitle = () => {
+      let currentElement = this.state.currentElement.toUpperCase();
+      return(
+        <Card> 
+          <CardBody> 
+            {currentElement}
+          </CardBody>
+        </Card>
+      )
+    }
+
     renderSideMenu = () => {
+      let currentElement = this.state.currentElement;
       return(
         <div> 
              <p />
-            {/* <h3> {this.renderSideMenuTitle()}</h3> */}
-            <ListGroup>
-                <ListGroupItem id="genesis"   tag="button" action>Overview</ListGroupItem>
-                <ListGroupItem id="vision"  tag="button" action>Disaster Response</ListGroupItem>
-                <ListGroupItem id="mission"  tag="button" action>Health </ListGroupItem>
-                <ListGroupItem id="people"  tag="button" action>People Behind ADISOM </ListGroupItem>
-                <ListGroupItem id="approach"  tag="button" action>Approach</ListGroupItem>
-            </ListGroup>
+            <h3> {this.renderSideMenuTitle()}</h3>
+            <SideMenu
+              args={["overview", "disaster", "health"]}
+              onClickAction={this.handleOnClick}
+              />
           </div> 
       )
     }

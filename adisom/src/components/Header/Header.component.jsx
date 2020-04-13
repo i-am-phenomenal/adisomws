@@ -3,12 +3,13 @@ import './Header.styles.scss';
 
 const Header = () => (
     <div className='header'>
-        <span class="header__text-box">
-                <h1 class="heading-primary">
-                    <span class="heading-primary--main">ADISOM</span>
-                    <span class="heading-primary--sub">is where life happens</span>
+        <span className="header__text-box">
+                <h1 className="heading-primary">
+                    <span className="heading-primary--main">ADISOM</span>
+                    <span className="heading-primary--sub">is where life happens</span>
                 </h1>
-            </span>
+                <a href="#" className="btn btn--white btn--animated">Discover Us</a>
+        </span>
     </div>
 );
 

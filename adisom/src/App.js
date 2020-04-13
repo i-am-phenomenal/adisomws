@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import NavigationBar from './components/NavigationBar/NavigationBar.component';
 import Header from './components/Header/Header.component';
+import InfoSection from './components/InfoSection/InfoSection.component';
 
 export default class App extends Component {
       constructor(props) {
@@ -18,11 +18,16 @@ export default class App extends Component {
         return(<Header /> )
       }
 
+      renderInfo = () => {
+        return(<InfoSection />)
+      }
+
       render() {
         return(
           <div> 
             {this.renderNavBar()}
             {this.renderHeader()}
+            {this.renderInfo()}
           </div> 
         )
       }

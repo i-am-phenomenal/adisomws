@@ -1,6 +1,14 @@
 import React, {Component} from 'react';
 import './App.scss';
 import NavigationBar from './components/NavigationBar/NavigationBar.component';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import AboutUsView from "./components/Aboutus";
+import OurWorkView from "./components/OurWork";
 import Header from './components/Header/Header.component';
 import InfoSection from './components/InfoSection/InfoSection.component';
 
@@ -11,7 +19,25 @@ export default class App extends Component {
       }
 
       renderNavBar = () => {
-        return(<NavigationBar /> )
+        return( <NavigationBar /> )
+      }
+
+      renderSwitch = () => {
+        return(
+          <Router>
+            <Switch>
+              <Route path="/about_us/">
+                <AboutUsView />
+              </Route>
+              <Route path="/our_work/"> 
+                <OurWorkView /> 
+              </Route> 
+              <Route path="/disaster_response/"> 
+                <AboutUsView /> 
+              </Route> 
+            </Switch>
+          </Router>
+        )
       }
 
       renderHeader = () => {
@@ -24,11 +50,11 @@ export default class App extends Component {
 
       render() {
         return(
-          <div> 
+          <div>
             {this.renderNavBar()}
             {this.renderHeader()}
-            {this.renderInfo()}
-          </div> 
+            {this.renderSwitch()}
+          </div>
         )
       }
 }

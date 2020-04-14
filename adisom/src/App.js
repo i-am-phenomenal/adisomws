@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './App.scss';
+// import './App.css';
 import NavigationBar from './components/NavigationBar/NavigationBar.component';
 import {
   BrowserRouter as Router,
@@ -8,9 +8,10 @@ import {
   Link
 } from "react-router-dom";
 import AboutUsView from "./components/Aboutus";
+import ContactUsView from "./components/ContactUs";
 import OurWorkView from "./components/OurWork";
 import Header from './components/Header/Header.component';
-import InfoSection from './components/InfoSection/InfoSection.component';
+// import InfoSection from './components/InfoSection/InfoSection.component';
 
 export default class App extends Component {
       constructor(props) {
@@ -35,6 +36,9 @@ export default class App extends Component {
               <Route path="/disaster_response/"> 
                 <AboutUsView /> 
               </Route> 
+              <Route path="/contact_us/"> 
+                <ContactUsView /> 
+                </Route> 
             </Switch>
           </Router>
         )
@@ -45,7 +49,7 @@ export default class App extends Component {
       }
 
       renderInfo = () => {
-        return(<InfoSection />)
+        // return(<InfoSection />)
       }
 
       render() {

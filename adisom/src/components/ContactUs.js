@@ -17,7 +17,7 @@ import {
     Col
 }
 from "reactstrap";
-
+import * as emailjs from "emailjs-com";
 export default class ContactUsView extends Component {
     constructor(props) {
         super(props);
@@ -66,7 +66,21 @@ export default class ContactUsView extends Component {
             || formDetails.message === "") {
                 alert("Please fill all the entries before sending the email");
             } else {
-                // Send Email WIP 
+                console.log(process.env.USER_ID, "122222222222");
+                console.log(process.env.TEMPLATE_ID, "000000000000");
+                let params = {
+                    from_name: formDetails.email,
+                    to_name: "testing.purposes.adisom@gmail.com",
+                    subject: "QUERIES/SUGGESTIONS REGARDING ADISOM",
+                    message_html: formDetails.message
+                }
+
+                emailjs.send(
+                    'gmail',
+                    "template_1BFNxFZR",
+                    params,
+                    "user_yyzDCcAk71RHZpB1EpFTi"
+                )
             }
     }
 
@@ -124,7 +138,7 @@ export default class ContactUsView extends Component {
                         type="name" 
                         name="name" 
                         id="name" 
-                        placeholder="Enter your name" 
+                        placeholder="Enter your name." 
                         value={formDetails.name} 
                         onChange={(e) => this.handleChange("name", e)}
                     />
@@ -135,7 +149,7 @@ export default class ContactUsView extends Component {
                         type="email" 
                         name="email" 
                         id="email" 
-                        placeholder="Enter your Email " 
+                        placeholder="Enter your Email." 
                         value={formDetails.emails} 
                         onChange={(e) => this.handleChange("email", e)}
                     />
@@ -146,7 +160,7 @@ export default class ContactUsView extends Component {
                         type="phone" 
                         name="phone" 
                         id="phone" 
-                        placeholder="Enter your Phone Number" 
+                        placeholder="Enter your Phone Number." 
                         value={formDetails.phoneNumber}
                         onChange={(e) => this.handleChange("phone", e)}
                         />
@@ -157,7 +171,7 @@ export default class ContactUsView extends Component {
                         type="address" 
                         name="address" 
                         id="address" 
-                        placeholder="Enter your address" 
+                        placeholder="Enter your address." 
                         value={formDetails.address}
                         onChange={(e) => this.handleChange("address", e)}
                         />
@@ -169,6 +183,7 @@ export default class ContactUsView extends Component {
                         name="message" 
                         id="message" 
                         value={formDetails.message}
+                        placeholder="Enter your message to us."
                         onChange={(e) => this.handleChange("message", e)}
                         />
                 </FormGroup>

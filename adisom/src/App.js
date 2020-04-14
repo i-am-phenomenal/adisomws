@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-// import './App.css';
 import NavigationBar from './components/NavigationBar/NavigationBar.component';
 import {
   BrowserRouter as Router,
@@ -12,7 +11,7 @@ import ContactUsView from "./components/ContactUs";
 import OurWorkView from "./components/OurWork";
 import Header from './components/Header/Header.component';
 // import InfoSection from './components/InfoSection/InfoSection.component';
-
+require('dotenv').config()
 export default class App extends Component {
       constructor(props) {
         super(props);

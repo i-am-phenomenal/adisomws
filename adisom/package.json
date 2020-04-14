@@ -7,6 +7,8 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.4.1",
+    "dotenv": "^8.2.0",
+    "emailjs-com": "^2.4.1",
     "mdbreact": "^4.25.5",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
@@ -16,8 +18,8 @@
     "reactstrap": "^8.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts start --env.USED_ID=user_yyzDCcAk71RHZpB1EpFTi --env.TEMPLATE_ID=template_1BFNxFZR",
+    "build": "react-scripts build --env.USED_ID=user_yyzDCcAk71RHZpB1EpFTi --env.TEMPLATE_ID=template_1BFNxFZR",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

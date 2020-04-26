@@ -16,6 +16,7 @@ import {
 }
 from 'reactstrap';
 import SideMenu from './SideMenu';
+import '../App.css';
 
 export default class AboutUsView extends Component {
     constructor(props) {
@@ -79,10 +80,9 @@ export default class AboutUsView extends Component {
 
     renderContentForJumboTron = () => {
             let currentElement = this.state.activeElement;
-            switch(currentElement) {
-                case "genesis":
                     return(
-                        <div> 
+                    <div> 
+                        <div id="genesisSection"> 
                             <h3 ><b> "Sustainability, social equality and the environment are now business problems. And corporate leaders can't depend on governments to solve them." </b> </h3>
                             <h4> <i> Peter Senge, Founder, Society for Organisational Learning </i> </h4> 
                             <br /> 
@@ -93,12 +93,12 @@ export default class AboutUsView extends Component {
                                 <Button color="primary">Learn More</Button>
                             </p>
                         </div>
-                    )                
-                    break;
 
-                case "vision":
-                    return(
-                        <div> 
+                        <br />
+                        <br />
+                        <br />
+
+                        <div id="visionSection"> 
                                 <ListGroup> 
                                     {this.state.aims.map(item => 
                                         <ListGroupItem>
@@ -108,25 +108,28 @@ export default class AboutUsView extends Component {
                                 </ListGroup>             
                             <br />
                         </div>
-                    )
-                    break;
 
-                case "mission":
-                    return(
-                        <Card>
-                            <CardBody>
-                            Adisom Welfare Foundation is to empower underprivileged children, youth and women through relevant education, innovative healthcare and market-focused livelihood programmes.
-                            <br /> 
-                            <br />
-                            Adisom Welfare Foundation is to deploy best possible methodology and technology for achieving ideal SROI (social return on investment), to practice and promote good governance. To link business competitiveness of the corporate with social development initiatives; also to sensitize privileged children, youth and citizens in general to promote Civic Driven Change.
-                            </CardBody>
-                        </Card>
-                    )   
-                    break;
-                
-                case "people":
-                    return(
-                        <div> 
+                        <br />
+                        <br />
+                        <br />
+
+                        <div id="missionSection"> 
+                            <Card>
+                                <CardBody>
+                                Adisom Welfare Foundation is to empower underprivileged children, youth and women through relevant education, innovative healthcare and market-focused livelihood programmes.
+                                <br /> 
+                                <br />
+                                Adisom Welfare Foundation is to deploy best possible methodology and technology for achieving ideal SROI (social return on investment), to practice and promote good governance. To link business competitiveness of the corporate with social development initiatives; also to sensitize privileged children, youth and citizens in general to promote Civic Driven Change.
+                                </CardBody>
+                            </Card>
+
+                        </div> 
+
+                        <br />
+                        <br />
+                        <br />
+
+                        <div id="peopleSection"> 
                          {this.state.peopleInvolved.map(object => 
                             <div>
                             <Card style={{width:"70%"}}>
@@ -140,11 +143,12 @@ export default class AboutUsView extends Component {
                           </div>
                          )}
                         </div> 
-                    )
-                    break;
 
-                case "approach": 
-                        return(
+                        <br />
+                        <br />
+                        <br />
+
+                        <div id="approachSection">     
                             <Card> 
                                 <CardBody> 
                                     <b> Adisom Welfare Foundation </b> believes that education is both the means as well as the end to a better life: the means because it empowers an individual to earn his/her livelihood and the end because it increases one's awareness on a range of issues - from healthcare to appropriate social behaviour to understanding one's rights - and in the process help him/her evolve as a better citizen. Education is the most effective tool which helps children build a strong foundation; enabling them to free themselves from the vicious cycle of ignorance, poverty and disease.
@@ -155,14 +159,10 @@ export default class AboutUsView extends Component {
                                     <br /> 
                                     <b> Adisom Welfare Foundation </b> extended its thematic areas of intervention by supporting family health, livelihood, and women empowerment. Children, their families and the community become the target group for Adisom Welfare Foundation's activities as child education cannot be done in isolation and nothing else but education for children can bring long lasting change in the society.
                                     </CardBody>
-                                </Card> 
-                        )
-                        break;
-
-                default: 
-                    return("")
-                    break;
-            }
+                            </Card> 
+                        </div> 
+                    </div> 
+            )
     }
 
     returnUpdatedActiveElement = () => {
@@ -187,12 +187,16 @@ export default class AboutUsView extends Component {
 
     handleClick = element => {
         this.setState({activeElement: element});
+        let updatedId = element + "Section"; 
+        var fetchedElement =  document.getElementById(updatedId);
+        fetchedElement.scrollIntoView()
     }
 
     renderSideMenuOptions = () => {
         let currentElement = this.state.activeElement;
         return(
-        <div>
+             // Work in progress 
+        <div style={{position: "", bottom: 250, right: 1250 }}>
             <p />
             <h3> {this.renderSideMenuTitle()}</h3>
             <SideMenu 
@@ -218,7 +222,7 @@ export default class AboutUsView extends Component {
                     <Row> 
                         <Col xs="3"> {this.renderSideMenu()} </Col> 
                         <Col xs="9"> 
-                            <Jumbotron>
+                            <Jumbotron >
                                 {this.renderContentForJumboTron()}
                             </Jumbotron>
                         </Col> 

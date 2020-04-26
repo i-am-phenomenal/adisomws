@@ -18,6 +18,8 @@ import {
 }
 from "reactstrap";
 import * as emailjs from "emailjs-com";
+import MapContainer from './MapContainer';
+
 export default class ContactUsView extends Component {
     constructor(props) {
         super(props);
@@ -35,23 +37,30 @@ export default class ContactUsView extends Component {
     renderDetailsSection= () => {
         return(
             <div> 
+                <br />
+                <br />
+                <br />
                 <Card>
-                    <CardImg style={{width: "20%", heigth:"20%"}} top width="100%" src="/assets/images/troll.png" alt="Card image cap" />
+                    <CardImg style={{width: "20%", heigth:"20%"}} top width="100%" src="" alt="Card image cap" />
                     <CardBody>
-                    <CardTitle>Mrs. Priyanka Chaturvedi </CardTitle>
-                    <CardSubtitle>President</CardSubtitle>
-                    <CardText>A text like i would be very happy to resolve your queries .... </CardText>
+                    <CardTitle> <h3>  <b>FOR ALL GENERAL QUERIES  </b> </h3> </CardTitle>
+                    <CardSubtitle>testing.purposes.adisom@gmail.com</CardSubtitle>
+                    {/* <CardText>A text like i would be very happy to resolve your queries .... </CardText> */}
+                    <br />
+                    <CardTitle> <h3>  <b> DONATION RELATED QUERIES </b> </h3> </CardTitle>
+                    <CardTitle> Name of the appropriate person -> Firstname Last Name </CardTitle>
+                    <CardTitle> testing.purposes.adisom@gmail.com</CardTitle>
                     </CardBody>
                 </Card>
 
-                <Card>
+                {/* <Card>
                     <CardImg style={{width: "20%", heigth:"20%"}} top width="100%" src="/assets/images/mark_pandey.jpg" alt="Card image cap" />
                     <CardBody>
                     <CardTitle>Mrs. Atul Kumar </CardTitle>
-                    <CardSubtitle>Vice President</CardSubtitle>
+                    <CardSubtitle>Vice President</CardSubtitle> GALLERY, PLACES WHERE FUNCTIONING CURRENTLY, STORY BEHIND ADISOM 
                     <CardText>A text like i would be very happy to resolve your queries .... </CardText>
                     </CardBody>
-                </Card>
+                </Card> */}
             </div> 
         )
     }
@@ -230,6 +239,9 @@ export default class ContactUsView extends Component {
             <div> 
                 {this.renderDetailsSection()}
                 {this.renderContactUsForm()}
+                <br /> 
+                <br /> 
+                <MapContainer /> 
             </div>
         )
     }

@@ -38,6 +38,9 @@ export default class NavigationBar extends Component {
             <NavItem>
               <NavLink href="/contact_us/">Contact Us</NavLink>
             </NavItem>
+            <NavItem>
+                <NavLink href="/gallery/"> Gallery</NavLink>
+                </NavItem> 
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Some more Options

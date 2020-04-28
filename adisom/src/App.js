@@ -10,6 +10,7 @@ import AboutUsView from "./components/Aboutus";
 import ContactUsView from "./components/ContactUs";
 import OurWorkView from "./components/OurWork";
 import Header from './components/Header/Header.component';
+import GalleryView from './components/GalleryView';
 // import InfoSection from './components/InfoSection/InfoSection.component';
 require('dotenv').config()
 export default class App extends Component {
@@ -31,13 +32,13 @@ export default class App extends Component {
               </Route>
               <Route path="/our_work/"> 
                 <OurWorkView /> 
-              </Route> 
-              <Route path="/disaster_response/"> 
-                <AboutUsView /> 
-              </Route> 
+              </Route>  
               <Route path="/contact_us/"> 
                 <ContactUsView /> 
                 </Route> 
+                <Route>
+                    <GalleryView />   
+                  </Route> 
             </Switch>
           </Router>
         )

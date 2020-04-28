@@ -28,25 +28,25 @@ export default class CarouselView extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            imageNames: [
-                "w_1", 
-                "w_2", 
-                "w_3", 
-                "w_4", 
-                "w_5", 
-                "w_6", 
-                "w_7", 
-                "w_8", 
-                "w_9",
-                "w_10", 
-                "w_11", 
-                "w_12", 
-                "w_13", 
-                "w_14", 
-                "w_15", 
-                "w_16", 
-                "w_17"
-            ],  
+            // imageNames: [
+            //     "w_1", 
+            //     "w_2", 
+            //     "w_3", 
+            //     "w_4", 
+            //     "w_5", 
+            //     "w_6", 
+            //     "w_7", 
+            //     "w_8", 
+            //     "w_9",
+            //     "w_10", 
+            //     "w_11", 
+            //     "w_12", 
+            //     "w_13", 
+            //     "w_14", 
+            //     "w_15", 
+            //     "w_16", 
+            //     "w_17"
+            // ],  
             currentElement: "overview",
         }
     }

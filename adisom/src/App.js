@@ -11,6 +11,7 @@ import ContactUsView from "./components/ContactUs";
 import OurWorkView from "./components/OurWork";
 import Header from './components/Header/Header.component';
 import GalleryView from './components/GalleryView';
+
 // import InfoSection from './components/InfoSection/InfoSection.component';
 require('dotenv').config()
 export default class App extends Component {

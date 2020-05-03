@@ -30,8 +30,8 @@ import './components/scss/_section_title.scss';
 import './components/scss/_slick-nav.scss';
 import './components/scss/_slider.scss';
 import './components/scss/_varriable.scss';
-import './components/scss/_style.scss';
-import './components/scss/_theme-default.scss';
+// import './components/scss/style.scss';
+import './components/scss/theme-default.scss';
 
 
 export default class App extends Component {

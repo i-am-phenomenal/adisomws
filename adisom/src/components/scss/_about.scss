@@ -1,5 +1,6 @@
 @import  "_responsive";
 @import  "_varriable";
+@import "_mixins";
 
 .about_area{
     padding: 120px 0;
@@ -377,7 +378,7 @@
 
 // volunter_bg_1
 .volunter_bg_1{
-    background-image: url(../img/volunteers/bg.png);
+    background-image: url(/custom_images/bg.png);
 }
 
 .become_volunter{

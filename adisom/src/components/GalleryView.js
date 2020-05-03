@@ -155,16 +155,15 @@ export default class GalleryView extends Component {
     }
 
     renderVideos = () => {
-
-     return(
-       <div>
-            {this.state.videosUrls.map(item => 
-                <VideoPlayer  
-                  videoUrl = {'/videos/' + item}
-                  />
-              )}
-       </div> 
-     ) 
+        return(
+          <div>
+                {this.state.videosUrls.map(item => 
+                    <VideoPlayer  
+                      videoUrl = {'/videos/' + item}
+                      />
+                  )}
+          </div> 
+        ) 
     }
 
     renderVideoCarousel = () => {

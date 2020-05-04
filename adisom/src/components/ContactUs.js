@@ -24,12 +24,11 @@ export default class ContactUsView extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            formDetails: {
+            formParams: {
                 name: "",
+                message: "",
                 email: "",
-                phoneNumber: "",
-                address: "",
-                message: ""
+                subject: ""
             }
         }
     }
@@ -52,36 +51,35 @@ export default class ContactUsView extends Component {
                     <CardTitle> testing.purposes.adisom@gmail.com</CardTitle>
                     </CardBody>
                 </Card>
-
-                {/* <Card>
-                    <CardImg style={{width: "20%", heigth:"20%"}} top width="100%" src="/assets/images/mark_pandey.jpg" alt="Card image cap" />
-                    <CardBody>
-                    <CardTitle>Mrs. Atul Kumar </CardTitle>
-                    <CardSubtitle>Vice President</CardSubtitle> GALLERY, PLACES WHERE FUNCTIONING CURRENTLY, STORY BEHIND ADISOM 
-                    <CardText>A text like i would be very happy to resolve your queries .... </CardText>
-                    </CardBody>
-                </Card> */}
             </div> 
         )
     }
 
+    isEmailValidated(emailId) {
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailId))
+        {
+            return (true)
+        }
+        alert("You have entered an invalid email address!")
+        return (false)
+    }
+
     validateDataAndSendEmail = (event) => {
         event.preventDefault();
-        let formDetails = this.state.formDetails;
-        if (formDetails.name === "" 
-            || formDetails.email === "" 
-            || formDetails.phoneNumber === "" 
-            || formDetails.address === ""
-            || formDetails.message === "") {
+        let formParams = this.state.formParams;        
+        if (formParams.name === "" 
+            || formParams.email === "" 
+            || formParams.subject === ""
+            || formParams.message === ""
+            || !(this.isEmailValidated(formParams.email))
+            ) {
                 alert("Please fill all the entries before sending the email");
             } else {
-                console.log(process.env.USER_ID, "122222222222");
-                console.log(process.env.TEMPLATE_ID, "000000000000");
                 let params = {
-                    from_name: formDetails.email,
+                    from_name: formParams.email,
                     to_name: "testing.purposes.adisom@gmail.com",
                     subject: "QUERIES/SUGGESTIONS REGARDING ADISOM",
-                    message_html: formDetails.message
+                    message_html: formParams.message
                 }
 
                 emailjs.send(
@@ -98,17 +96,16 @@ export default class ContactUsView extends Component {
         let updatedFormDetails = {
             name: "",
             email: "",
-            phoneNumber: "",
-            address: "",
+            subject: "",
             message: ""
         }
 
-        this.setState({formDetails: updatedFormDetails});
+        this.setState({formParams: updatedFormDetails});
     }
 
-    handleChange = (arg ,event) => {
+    handleChange = (event, arg) => {
         event.preventDefault();
-        let currentObject = this.state.formDetails;
+        let currentObject = this.state.formParams;
         let value = event.target.value;
         switch (arg) {
             case "name":
@@ -118,13 +115,9 @@ export default class ContactUsView extends Component {
             case "email": 
                 currentObject.email = value;
                 break; 
-            
-            case "phone": 
-                currentObject.phoneNumber = value;
-                break;
 
-            case "address": 
-                currentObject.address = value;
+            case "subject": 
+                currentObject.subject = value;
                 break;
 
             case "message": 
@@ -134,7 +127,7 @@ export default class ContactUsView extends Component {
             default: 
                 break;
         }
-        this.setState({formDetails: currentObject});
+        this.setState({formParams: currentObject});
     }
 
     renderForm = () => {
@@ -199,7 +192,7 @@ export default class ContactUsView extends Component {
                 <Button onClick={(e) => this.validateDataAndSendEmail(e)}>Submit</Button>
                 &nbsp;
                 &nbsp;
-                <Button onClick={(e) => this.resetAllFields(e)}>Reset</Button>
+                <Button >Reset</Button>
             </Form>
         )
     }
@@ -234,14 +227,142 @@ export default class ContactUsView extends Component {
         )
     }
 
+    renderContactForm = () => {
+        let details = this.state.formParams;
+        return(
+            <div class="row">
+                    <div class="col-12">
+                        <h2 class="contact-title">Get in Touch</h2>
+                    </div>
+                    <div class="col-lg-8">
+                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea 
+                                            class="form-control w-100" 
+                                            name="message" 
+                                            id="message" 
+                                            cols="30" 
+                                            rows="9" 
+                                            onfocus="this.placeholder = ''" 
+                                            onblur="this.placeholder = 'Enter Message'" 
+                                            placeholder="Enter your message"
+                                            value = {details.message}
+                                            onChange = {(e) => this.handleChange(e, "message")}
+                                            />                                            
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input 
+                                            class="form-control valid" 
+                                            name="name" 
+                                            id="name" 
+                                            type="text" 
+                                            onfocus="this.placeholder = ''" 
+                                            onblur="this.placeholder = 'Enter your name'" 
+                                            placeholder="Enter your name" 
+                                            value = {details.name}
+                                            onChange = {(e) => this.handleChange(e, "name")}
+                                            />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input 
+                                            class="form-control valid" 
+                                            name="email" 
+                                            id="email" 
+                                            type="email" 
+                                            onfocus="this.placeholder = ''" 
+                                            onblur="this.placeholder = 'Enter email address'" 
+                                            placeholder="Email" 
+                                            value = {details.email}
+                                            onChange = {(e) => this.handleChange(e, "email")}
+                                            />
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input 
+                                            class="form-control" 
+                                            name="subject" 
+                                            id="subject" 
+                                            type="text" 
+                                            onfocus="this.placeholder = ''" 
+                                            onblur="this.placeholder = 'Enter Subject'" 
+                                            placeholder="Enter Subject" 
+                                            value = {details.subject}
+                                            onChange = {(e) => this.handleChange(e, "subject")}
+                                            />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <button 
+                                    type="submit" 
+                                    class="button button-contactForm boxed-btn"
+                                    onClick = {(event) => this.validateDataAndSendEmail(event)}
+                                    >
+                                        Send
+                                    </button>
+                                    &nbsp;
+                                    &nbsp;
+                                    &nbsp;
+                                    &nbsp;
+                                    
+                                    <button                                    
+                                    type="submit" 
+                                    class="button button-contactForm boxed-btn"
+                                    onClick={(e) => this.resetAllFields(e)}
+                                    >
+                                        Reset
+                                    </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-home"></i></span>
+                            <div class="media-body">
+                                <h3>F-14/20, Krishna Nagar</h3>
+                                <p>New Delhi - 110051</p>
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                            <div class="media-body">
+                                <h3>+91 9582024729</h3>
+                                <p>Mon to Fri 9am to 6pm</p>
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-email"></i></span>
+                            <div class="media-body">
+                                <h3>testing.purposes.adisom@gmail.com</h3>
+                                <p>Send us your query anytime!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        )
+    }
+
     render() {
         return(
             <div> 
-                {this.renderDetailsSection()}
-                {this.renderContactUsForm()}
-                <br /> 
-                <br /> 
+                <br />
+                <br />
+                <br />
+                <br />
                 <MapContainer /> 
+                <br />
+                <br />
+                
+                {this.renderContactForm()}                
+                <br /> 
+                <br /> 
             </div>
         )
     }

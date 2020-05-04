@@ -217,7 +217,7 @@ export default class App extends Component {
                               <div class="main-menu  d-none d-lg-block">
                                   <nav>
                                       <ul id="navigation">
-                                          <li><a class="active" href="">home</a></li>
+                                          <li><a class="active" href="/">home</a></li>
                                           <li><a href="/about_us/" >About</a></li>
                                           <li><a href="causes.html" >causes</a></li>
                                           <li><a href="impact.html" >impact</a></li>
@@ -234,7 +234,7 @@ export default class App extends Component {
                                                   <li><a href="elements.html">elements</a></li>
                                               </ul>
                                           </li>
-                                          <li><a href="contact.html">Contact</a></li>
+                                          <li><a href="/contact_us/">Contact</a></li>
                                       </ul>
                                   </nav>
                               </div>
@@ -357,7 +357,7 @@ export default class App extends Component {
 
         renderConditionally = () => {
           let currentPage = window.location.href.split("/").reverse()[1];
-          console.log(currentPage, "1111")
+          console.log(currentPage, "SSSSSSSS")
           if (currentPage == "localhost:3000") {
             return(
               <div> 

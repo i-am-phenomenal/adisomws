@@ -289,66 +289,6 @@ export default class AboutUsView extends Component {
         )
     }
 
-    renderCustomBanner = () => {
-        let currentPage = window.location.href.split("/").reverse()[1];
-        
-        if (currentPage == "about_us") {
-            return(
-                <header>
-                <div class="header-area ">
-                    <div id="sticky-header" class="main-header-area">
-                        <div class="container-fluid p-0">
-                            <div class="row align-items-center justify-content-between no-gutters">
-                                <div class="col-xl-2 col-lg-2">
-                                    <div class="logo-img">
-                                        <a href="index.html">
-                                            <img src="img/logo.png" alt="" />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-xl-7 col-lg-7">
-                                    <div class="main-menu  d-none d-lg-block">
-                                        <nav>
-                                            <ul id="navigation">
-                                                <li><a href="index.html">home</a></li>
-                                                <li><a class="active" href="about.html">About</a></li>
-                                                <li><a href="causes.html">causes</a></li>
-                                                <li><a href="impact.html">impact</a></li>
-        
-                                                <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                                    <ul class="submenu">
-                                                        <li><a href="blog.html">blog</a></li>
-                                                        <li><a href="single-blog.html">single-blog</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                                    <ul class="submenu">
-                                                        <li><a href="causes-details.html">causes-details</a></li>
-                                                        <li><a href="elements.html">elements</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                                    <div class="donate_now">
-                                        <a href="#" class="boxed-btn">Donate Now</a>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="mobile_menu d-block d-lg-none"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            )
-        }
-    }
-
     render() {
         return(
             <div> 
@@ -358,5 +298,4 @@ export default class AboutUsView extends Component {
                 </div> 
         )
     }
-
 }

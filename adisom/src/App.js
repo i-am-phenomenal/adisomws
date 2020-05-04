@@ -11,8 +11,12 @@ import ContactUsView from "./components/ContactUs";
 import OurWorkView from "./components/OurWork";
 
 import GalleryView from './components/GalleryView';
+import {
+  GiHamburger,
+  GiMedicines,
+  GiBookshelf
+} from 'react-icons/gi';
 
-// import './components/_slider.scss';
 import './components/scss/_about.scss';
 import './components/scss/_blog.scss';
 import './components/scss/_blog_part.scss';
@@ -30,7 +34,7 @@ import './components/scss/_section_title.scss';
 import './components/scss/_slick-nav.scss';
 import './components/scss/_slider.scss';
 import './components/scss/_varriable.scss';
-// import './components/scss/style.scss';
+import './components/scss/style.scss';
 import './components/scss/theme-default.scss';
 
 
@@ -38,6 +42,14 @@ export default class App extends Component {
       constructor(props) {
         super(props);
         this.state = {}
+      }
+
+      componentDidMount() {
+        window.addEventListener('scroll', this.handlePageScroll);
+      }
+
+      componentWillUnmount() {
+        window.removeEventListener('scroll', this.handlePageScroll);
       }
 
       renderNavBar = () => {
@@ -145,8 +157,8 @@ export default class App extends Component {
                   <div class="row">
                       <div class="col-xl-4 col-md-4">
                           <div class="single_serve text-center">
-                              <div class="serve_icon">
-                                  <i class="flaticon-meat"></i>
+                              <div class="serve_icon">                        
+                                  <GiHamburger />
                               </div>
                               <h3>Pure Food & Water</h3>
                               <p>Inspires employees and organizations to support causes they care about. We do this to bring
@@ -156,7 +168,7 @@ export default class App extends Component {
                       <div class="col-xl-4 col-md-4">
                           <div class="single_serve text-center">
                               <div class="serve_icon">
-                                  <i class="flaticon-medicine"></i>
+                                  <GiMedicines />
                               </div>
                               <h3>Medicine</h3>
                               <p>Inspires employees and organizations to support causes they care about. We do this to bring
@@ -166,7 +178,7 @@ export default class App extends Component {
                       <div class="col-xl-4 col-md-4">
                           <div class="single_serve text-center">
                               <div class="serve_icon">
-                                  <i class="flaticon-open-magazine"></i>
+                                  <GiBookshelf />
                               </div>
                               <h3>Education</h3>
                               <p>Inspires employees and organizations to support causes they care about. We do this to bring
@@ -178,11 +190,78 @@ export default class App extends Component {
           </div>      
         )
       }
+
+      renderHeader = () => {
+        return(
+          <header>
+          <div class="header-area ">
+              <div id="sticky-header" class="main-header-area">
+                  <div class="container-fluid p-0">
+                      <div class="row align-items-center justify-content-between no-gutters">
+                          <div class="col-xl-2 col-lg-2">
+                              <div class="logo-img">
+                                  <a href="index.html">
+                                      <img src="/assets/images/Adisom/NGO logo.jpg" alt="" />
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="col-xl-7 col-lg-7">
+                              <div class="main-menu  d-none d-lg-block">
+                                  <nav>
+                                      <ul id="navigation">
+                                          <li><a class="active" href="index.html">home</a></li>
+                                          <li><a href="about.html">About</a></li>
+                                          <li><a href="causes.html">causes</a></li>
+                                          <li><a href="impact.html">impact</a></li>
+  
+                                          <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                              <ul class="submenu">
+                                                  <li><a href="blog.html">blog</a></li>
+                                                  <li><a href="single-blog.html">single-blog</a></li>
+                                              </ul>
+                                          </li>
+                                          <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                                              <ul class="submenu">
+                                                  <li><a href="causes-details.html">causes-details</a></li>
+                                                  <li><a href="elements.html">elements</a></li>
+                                              </ul>
+                                          </li>
+                                          <li><a href="contact.html">Contact</a></li>
+                                      </ul>
+                                  </nav>
+                              </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                              {/* <div class="donate_now">
+                                  <a href="#" class="boxed-btn">Donate Now</a>
+                              </div> */}
+                          </div>
+                          <div class="col-12">
+                              <div class="mobile_menu d-block d-lg-none"></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </header>
+        )
+      }
+
+      handlePageScroll = (event) => {
+          let element = document.getElementById("sticky-header");
+          var sticky = window.pageYOffset;
+          if (sticky < 400) {  
+            element.classList.remove("sticky");
+          } else {
+            element.classList.add("sticky");
+          }
+        }
       
       render() {
         return(
-          <div>
-            {this.renderNavBar()}
+          <div onScroll={(e) => this.handlePageScroll(e)}>
+            {/* {this.renderNavBar()} */}
+            {this.renderHeader()}
             {this.renderBanner()}
             <br /> 
             <br /> 

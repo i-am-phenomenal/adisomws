@@ -232,10 +232,129 @@ export default class AboutUsView extends Component {
         )
     }
 
+    renderSubSection = () => {
+        return(
+            <div class="about_page">
+        <div class="container">
+            <br /> 
+            <br /> 
+            <br /> 
+            <div class="row">
+                <div class="col-xl-6 col-md-6">
+                    <div class="about_image">
+                        <img src="/assets/images/2.png" alt="" />
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6">
+                    <div class="about_image">
+                        <img src="/assets/images/1.png" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="about_info">
+                        <h3>We are Global Non-profit NGO to help people <br />
+                            To make a better World</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-md-6">
+                    <div class="about_text_info">
+                        <p>According to the research firm Frost & Sullivan, the estimated size of the North
+                            American used test and measurement equipment market was $446.4 million
+                            in 2004 and is estimated to grow to $654.5 million by 2011. For over 50 years,
+                            companies and governments have procured used test and measurement
+                            instruments.</p>
+                        <p>According to the research firm Frost & Sullivan, the estimated size of the North
+                            American used test and measurement equipment market was $446.4 million
+                            in 2004 and is estimated to grow to $654.5 million by 2011. For over 50 years,
+                            companies and governments have procured used test and measurement
+                            instruments.</p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6">
+                    <div class="about_text_info">
+                        <p>According to the research firm Frost & Sullivan, the estimated size of the North
+                            American used test and measurement equipment market was $446.4 million
+                            in 2004 and is estimated to grow to $654.5 million by 2011. For over 50 years,
+                            companies and governments have procured used test and measurement
+                            instruments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        )
+    }
+
+    renderCustomBanner = () => {
+        let currentPage = window.location.href.split("/").reverse()[1];
+        
+        if (currentPage == "about_us") {
+            return(
+                <header>
+                <div class="header-area ">
+                    <div id="sticky-header" class="main-header-area">
+                        <div class="container-fluid p-0">
+                            <div class="row align-items-center justify-content-between no-gutters">
+                                <div class="col-xl-2 col-lg-2">
+                                    <div class="logo-img">
+                                        <a href="index.html">
+                                            <img src="img/logo.png" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-7 col-lg-7">
+                                    <div class="main-menu  d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">
+                                                <li><a href="index.html">home</a></li>
+                                                <li><a class="active" href="about.html">About</a></li>
+                                                <li><a href="causes.html">causes</a></li>
+                                                <li><a href="impact.html">impact</a></li>
+        
+                                                <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                                    <ul class="submenu">
+                                                        <li><a href="blog.html">blog</a></li>
+                                                        <li><a href="single-blog.html">single-blog</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                                                    <ul class="submenu">
+                                                        <li><a href="causes-details.html">causes-details</a></li>
+                                                        <li><a href="elements.html">elements</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                                    <div class="donate_now">
+                                        <a href="#" class="boxed-btn">Donate Now</a>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mobile_menu d-block d-lg-none"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            )
+        }
+    }
+
     render() {
         return(
             <div> 
-                {this.renderJumboTron()}
+                {/* {this.renderCustomBanner()} */}
+                {this.renderSubSection()}
+                {/* {this.renderJumboTron()} */}
                 </div> 
         )
     }

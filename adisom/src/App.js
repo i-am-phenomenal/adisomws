@@ -17,6 +17,12 @@ import {
   GiBookshelf
 } from 'react-icons/gi';
 
+import {
+  FaFacebookSquare,
+  FaTwitter,
+  FaInstagramSquare
+} from 'react-icons/fa';
+
 import './components/scss/_about.scss';
 import './components/scss/_blog.scss';
 import './components/scss/_blog_part.scss';
@@ -41,7 +47,9 @@ import './components/scss/theme-default.scss';
 export default class App extends Component {
       constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+          currentPage: ""
+        }
       }
 
       componentDidMount() {
@@ -149,7 +157,7 @@ export default class App extends Component {
                           <div class="section_title text-center mb-60">
                               <span>We Work For</span>
                               <h3>
-                                  We Serve For Peoples
+                                  The Betterment Of Society
                               </h3>
                           </div>
                       </div>
@@ -200,7 +208,7 @@ export default class App extends Component {
                       <div class="row align-items-center justify-content-between no-gutters">
                           <div class="col-xl-2 col-lg-2">
                               <div class="logo-img">
-                                  <a href="index.html">
+                                  <a href="">
                                       <img src="/assets/images/Adisom/NGO logo.jpg" alt="" />
                                   </a>
                               </div>
@@ -209,10 +217,10 @@ export default class App extends Component {
                               <div class="main-menu  d-none d-lg-block">
                                   <nav>
                                       <ul id="navigation">
-                                          <li><a class="active" href="index.html">home</a></li>
-                                          <li><a href="about.html">About</a></li>
-                                          <li><a href="causes.html">causes</a></li>
-                                          <li><a href="impact.html">impact</a></li>
+                                          <li><a class="active" href="">home</a></li>
+                                          <li><a href="/about_us/" >About</a></li>
+                                          <li><a href="causes.html" >causes</a></li>
+                                          <li><a href="impact.html" >impact</a></li>
   
                                           <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                               <ul class="submenu">
@@ -256,20 +264,120 @@ export default class App extends Component {
             element.classList.add("sticky");
           }
         }
-      
+
+        renderFooter = () => {
+          return(
+            <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Join With Us
+                            </h3>
+                            <p class="footer_text doanar"> <a class="first" href="#">Become a Volunteer</a> <br /><a
+                                    href="#">Become a Donor</a></p>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                address
+                            </h3>
+                            <p class="footer_text">F-14/20, Krishna Nagar, Delhi-110051 <br />
+                                + 91 9582024729 <br />
+                                <a class="domain" href="#">testing.purposes.adisom@gmail.com</a></p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <FaFacebookSquare />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <FaTwitter />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <FaInstagramSquare /> 
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Navigation
+                            </h3>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Causes</a></li>
+                                <li><a href="#">Impact</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Newsletter
+                            </h3>
+                            <form action="#" class="newsletter_form">
+                                <input type="text" placeholder="Enter your mail" />
+                                <button type="submit">Sign Up</button>
+                            </form>
+                            <p class="newsletter_text">Subscribe newsletter to get updates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+          )
+        }
+
+        renderConditionally = () => {
+          let currentPage = window.location.href.split("/").reverse()[1];
+          console.log(currentPage, "1111")
+          if (currentPage == "localhost:3000") {
+            return(
+              <div> 
+                    {this.renderAboutUsInfo()}
+                    {this.renderServiceArea()}
+                </div> 
+            )
+          } else {
+            return("")
+          }
+        }
+
       render() {
         return(
           <div onScroll={(e) => this.handlePageScroll(e)}>
-            {/* {this.renderNavBar()} */}
             {this.renderHeader()}
             {this.renderBanner()}
-            <br /> 
-            <br /> 
-            {this.renderAboutUsInfo()}
-            <br /> 
-            <br /> 
-            {this.renderServiceArea()}
+            {this.renderConditionally()}
             {this.renderSwitch()}
+            {this.renderFooter()}
           </div>
         )
       }

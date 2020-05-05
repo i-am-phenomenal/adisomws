@@ -137,6 +137,7 @@ export default class App extends Component {
                       <div class="single_slider">
                           <div class="slider_text">
                             {bannerText}  
+                            {/* Just to check  */}
                           </div>
                       </div>
                   </div>

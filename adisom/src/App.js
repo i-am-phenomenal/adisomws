@@ -9,7 +9,7 @@ import {
 import AboutUsView from "./components/Aboutus";
 import ContactUsView from "./components/ContactUs";
 import OurWorkView from "./components/OurWork";
-
+import BlogView from './components/BlogView';
 import GalleryView from './components/GalleryView';
 import {
   GiHamburger,
@@ -80,12 +80,55 @@ export default class App extends Component {
                 <Route path="/gallery/">
                     <GalleryView />   
                   </Route> 
+                  <Route path="/blog/"> 
+                    <BlogView />
+                  </Route>
             </Switch>
           </Router>
         )
       }
 
+      getUpdatedBannerText = () => {
+          let currentWindow = window.location.href.split("/").reverse()[1];
+
+          switch (currentWindow) {
+                case "about_us": 
+                    return (
+                        <h3> About Us </h3> 
+                        )
+                    break;
+
+                case "blog":
+                    return (
+                        <h3>Blog</h3> 
+                    )
+                    break; 
+
+                case "contact_us": 
+                    return (
+                        <h3> Contact Us </h3> 
+                    )
+                    break; 
+
+                case "localhost:3000": 
+                    return(
+                        <div> 
+                            <h3>Support the Causes <br />
+                                    You Care About</h3>
+                                <p>At Adisom Welfare Foundation we believe that everyone has the right to be <br />
+                                    cared for and the right to be protected </p>
+                        </div> 
+                    )
+                    break;
+
+                default: 
+                        return("")
+                        break
+          }
+      }
+
       renderBanner = () => {
+          let bannerText = this.getUpdatedBannerText()
         return(
           <div class="slider_area slider_bg_1 d-flex align-items-center">
           <div class="container">
@@ -93,11 +136,7 @@ export default class App extends Component {
                   <div class="col-xl-12">
                       <div class="single_slider">
                           <div class="slider_text">
-                              <h3>Support the Causes <br />
-                                  You Care About</h3>
-                              <p>At Adisom Welfare Foundation we believe that everyone has the right to be <br />
-                                  cared for and the right to be protected </p>
-      
+                            {bannerText}  
                           </div>
                       </div>
                   </div>
@@ -224,7 +263,7 @@ export default class App extends Component {
   
                                           <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                               <ul class="submenu">
-                                                  <li><a href="blog.html">blog</a></li>
+                                                  <li><a href="/blog/">blog</a></li>
                                                   <li><a href="single-blog.html">single-blog</a></li>
                                               </ul>
                                           </li>

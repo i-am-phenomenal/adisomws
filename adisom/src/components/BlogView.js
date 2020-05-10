@@ -129,7 +129,7 @@ export default class BlogView extends Component {
                                 </div>
     
                                 <div class="blog_details">
-                                    <a class="d-inline-block" href="single-blog.html">
+                                    <a class="d-inline-block" href="/blogs/ode_to_murakami/">
                                         <h2>An Ode to Murakami: Author Review!</h2>
                                     </a>
                                     <p>An elegant upside down painting, with a flawless proportion of colors to spotless voids, of chaos to a peaceful quite. A suave piano record, crafted with the utmost patience, with the high pitched noises coming into a convalescent equilibrium with their low pitched counterparts. The angry clouds, indecisive between a bold black or an unimpressive grey hue.</p>

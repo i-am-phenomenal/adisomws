@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { Card } from 'reactstrap';
 
 export default class PerceptionOfMemoryView extends Component {
     constructor(props) {

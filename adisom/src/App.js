@@ -13,6 +13,7 @@ import BlogView from './components/BlogView';
 import GalleryView from './components/GalleryView';
 import CoronaBlogView from './components/CoronaBlogView';
 import PerceptionOfMemoryView from './components/PerceptionOfMemoryView';
+import MurakamiBlog from './components/MurakamiBlog';
 import {
   GiHamburger,
   GiMedicines,
@@ -75,6 +76,9 @@ export default class App extends Component {
                 </Route> 
                 <Route path = "/blogs/perception_of_memory/"> 
                     <PerceptionOfMemoryView /> 
+                </Route> 
+                <Route path = "/blogs/ode_to_murakami/"> 
+                    <MurakamiBlog /> 
                 </Route> 
               <Route path="/about_us/">
                 <AboutUsView />

@@ -11,6 +11,7 @@ import ContactUsView from "./components/ContactUs";
 import OurWorkView from "./components/OurWork";
 import BlogView from './components/BlogView';
 import GalleryView from './components/GalleryView';
+import CoronaBlogView from './components/CoronaBlogView';
 import {
   GiHamburger,
   GiMedicines,
@@ -68,6 +69,12 @@ export default class App extends Component {
         return(
           <Router>
             <Switch>
+                <Route path = "/blogs/corona_extension_hypothesis/"> 
+                    <CoronaBlogView /> 
+                </Route> 
+                <Route path = "/blogs/perception_of_memory/"> 
+                    <CoronaBlogView /> 
+                </Route> 
               <Route path="/about_us/">
                 <AboutUsView />
               </Route>

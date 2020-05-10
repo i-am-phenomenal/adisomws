@@ -12,6 +12,7 @@ import OurWorkView from "./components/OurWork";
 import BlogView from './components/BlogView';
 import GalleryView from './components/GalleryView';
 import CoronaBlogView from './components/CoronaBlogView';
+import PerceptionOfMemoryView from './components/PerceptionOfMemoryView';
 import {
   GiHamburger,
   GiMedicines,
@@ -73,7 +74,7 @@ export default class App extends Component {
                     <CoronaBlogView /> 
                 </Route> 
                 <Route path = "/blogs/perception_of_memory/"> 
-                    <CoronaBlogView /> 
+                    <PerceptionOfMemoryView /> 
                 </Route> 
               <Route path="/about_us/">
                 <AboutUsView />

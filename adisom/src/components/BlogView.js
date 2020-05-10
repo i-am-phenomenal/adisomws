@@ -89,9 +89,9 @@ export default class BlogView extends Component {
                                     <p>
                                     A gutsy take on the ongoing COVID-19 pandemic because the best way to escape disaster, is to embrace it. I envisage this is how events might take a turn if the catastrophic activities do not begin to cease in a month or two. Here’s to hoping for a better future for everyone, but for now, let’s read what will happen if that doesn’t occur.
                                         </p> 
-                                    {/* <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                        he earth it first without heaven in place seed it second morning saying.</p> */}
-                                    
+                                        <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> CoronaVirus, Articles, Hypothesis, Creative Writing, Fiction</a></li>
+                                    </ul>                                    
                                 </div>
                             </article>
     
@@ -114,8 +114,7 @@ export default class BlogView extends Component {
                                     </a>
                                     <p>That’s the first thing you notice as your eyes flutter awake and roam to the open window right in front of them. The plain ivory curtains made to match the carpet, are flitting away slightly, so it must be windy, but you can’t feel it.</p>
                                     <ul class="blog-info-link">
-                                        <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                        <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                        <li><a href="#"><i class="fa fa-user"></i> Storytelling, Stories, Time, Painting, Quarantine</a></li>
                                     </ul>
                                 </div>
                             </article>
@@ -131,13 +130,11 @@ export default class BlogView extends Component {
     
                                 <div class="blog_details">
                                     <a class="d-inline-block" href="single-blog.html">
-                                        <h2>Google inks pact for new 35-storey office</h2>
+                                        <h2>An Ode to Murakami: Author Review!</h2>
                                     </a>
-                                    <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                        he earth it first without heaven in place seed it second morning saying.</p>
+                                    <p>An elegant upside down painting, with a flawless proportion of colors to spotless voids, of chaos to a peaceful quite. A suave piano record, crafted with the utmost patience, with the high pitched noises coming into a convalescent equilibrium with their low pitched counterparts. The angry clouds, indecisive between a bold black or an unimpressive grey hue.</p>
                                     <ul class="blog-info-link">
-                                        <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                        <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                        <li><a href="#"><i class="fa fa-user"></i> Literature, Books and Authors, Haruki Murakami, Book Review, Review</a></li>
                                     </ul>
                                 </div>
                             </article>

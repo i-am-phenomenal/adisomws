@@ -166,7 +166,6 @@ export default class BlogView extends Component {
         </section>
         )
     }
-
     render() {
         return(
             <div>

@@ -273,32 +273,21 @@ export default class App extends Component {
                               <div class="main-menu  d-none d-lg-block">
                                   <nav>
                                       <ul id="navigation">
-                                          <li><a class="active" href="/">home</a></li>
-                                          <li><a href="/about_us/" >About</a></li>
-                                          <li><a href="causes.html" >causes</a></li>
-                                          <li><a href="impact.html" >impact</a></li>
-  
+                                          <li><a class="active" href="/">Home</a></li>
+                                          <li><a href="/about_us/" >About</a></li>  
                                           <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                               <ul class="submenu">
                                                   <li><a href="/blog/">blog</a></li>
                                                   <li><a href="single-blog.html">single-blog</a></li>
                                               </ul>
                                           </li>
-                                          <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                              <ul class="submenu">
-                                                  <li><a href="causes-details.html">causes-details</a></li>
-                                                  <li><a href="elements.html">elements</a></li>
-                                              </ul>
-                                          </li>
                                           <li><a href="/contact_us/">Contact</a></li>
+                                          <li><a href="/gallery/">Gallery</a></li>
                                       </ul>
                                   </nav>
                               </div>
                           </div>
                           <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                              {/* <div class="donate_now">
-                                  <a href="#" class="boxed-btn">Donate Now</a>
-                              </div> */}
                           </div>
                           <div class="col-12">
                               <div class="mobile_menu d-block d-lg-none"></div>
@@ -374,8 +363,6 @@ export default class App extends Component {
                             <ul>
                                 <li><a href="#">Home</a></li>
                                 <li><a href="#">About</a></li>
-                                <li><a href="#">Causes</a></li>
-                                <li><a href="#">Impact</a></li>
                                 <li><a href="#">Blog</a></li>
                                 <li><a href="#">Contact</a></li>
                             </ul>

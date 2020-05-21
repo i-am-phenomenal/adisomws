@@ -312,6 +312,7 @@ export default class GalleryView extends Component {
             {this.renderImageTextAbove()} 
             {this.renderImageGallery()}
             {this.renderGalleryTextBelow()}
+            {/* {this.renderVideos()} */}
           </div> 
         )
     }

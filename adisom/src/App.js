@@ -124,7 +124,13 @@ export default class App extends Component {
                     return (
                         <h3> Contact Us </h3> 
                     )
-                    break; 
+                    break;
+                    
+                case "gallery":
+                    return(
+                        <h3> Gallery </h3> 
+                    )
+                    break;
 
                 case "localhost:3000": 
                     return(
@@ -144,7 +150,6 @@ export default class App extends Component {
       }
 
       renderBanner = () => {
-          let bannerText = this.getUpdatedBannerText()
         return(
           <div class="slider_area slider_bg_1 d-flex align-items-center">
           <div class="container">
@@ -152,8 +157,7 @@ export default class App extends Component {
                   <div class="col-xl-12">
                       <div class="single_slider">
                           <div class="slider_text">
-                            {bannerText}  
-                            {/* Just to check  */}
+                            {this.getUpdatedBannerText()}  
                           </div>
                       </div>
                   </div>
@@ -275,14 +279,9 @@ export default class App extends Component {
                                       <ul id="navigation">
                                           <li><a class="active" href="/">Home</a></li>
                                           <li><a href="/about_us/" >About</a></li>  
-                                          <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                              <ul class="submenu">
-                                                  <li><a href="/blog/">blog</a></li>
-                                                  <li><a href="single-blog.html">single-blog</a></li>
-                                              </ul>
-                                          </li>
-                                          <li><a href="/contact_us/">Contact</a></li>
+                                          <li><a href="/blog/">blog</a></li>
                                           <li><a href="/gallery/">Gallery</a></li>
+                                          <li><a href="/contact_us/">Contact</a></li>
                                       </ul>
                                   </nav>
                               </div>
@@ -337,7 +336,7 @@ export default class App extends Component {
                             <div class="socail_links">
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://www.instagram.com/adisomwelfaresociety/">
                                             <FaFacebookSquare />
                                         </a>
                                     </li>
@@ -361,10 +360,11 @@ export default class App extends Component {
                                 Navigation
                             </h3>
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/about_us/">About</a></li>
+                                <li><a href="/blog/">Blog</a></li>
+                                <li><a href="/gallery/">Gallery</a></li>
+                                <li><a href="/contact_us/">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -400,7 +400,6 @@ export default class App extends Component {
 
         renderConditionally = () => {
           let currentPage = window.location.href.split("/").reverse()[1];
-          console.log(currentPage, "SSSSSSSS")
           if (currentPage == "localhost:3000") {
             return(
               <div> 

@@ -349,9 +349,103 @@ export default class ContactUsView extends Component {
         )
     }
 
+    renderMembers = () => {
+        return( 
+            <div class="volunteers_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-60">
+                        <span>Meet our </span>
+                        <h3>
+                            Team
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-md-6">
+                    <div class="single_volunteer">
+                        <div class="thumb">
+                            <img src="/assets/images/Adisom/Member_1.jpg" alt="" />
+                            {/* <div class="social_links">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                </ul>
+                            </div> */}
+                        </div>
+                        <div class="author_name text-center">
+                            <h3>Mrs Priyanka Chaturvedi </h3>
+                            <span>President</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="single_volunteer">
+                        <div class="thumb">
+                            <img src="/assets/images/Adisom/Member_2.jpg" alt="" />
+                            {/* <div class="social_links">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                </ul>
+                            </div> */}
+                        </div>
+                        <div class="author_name text-center">
+                            <h3>Mr Atul Kumar</h3>
+                            <span>Vice President </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="single_volunteer">
+                        <div class="thumb">
+                            <img src="/assets/images/Adisom/Member_3.jpg" alt="" />
+                            {/* <div class="social_links">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                </ul>
+                            </div> */}
+                        </div>
+                        <div class="author_name text-center">
+                            <h3>Ms Priya Chaturvedi</h3>
+                            <span>Treasurer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="single_volunteer">
+                        <div class="thumb">
+                            <img src="/assets/images/Adisom/Member_4.jpg" alt="" />
+                            {/* <div class="social_links">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                </ul>
+                            </div> */}
+                        </div>
+                        <div class="author_name text-center">
+                            <h3>Mrs Sunita Sharma</h3>
+                            <span>Member</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        )
+    }
+
     render() {
         return(
             <div> 
+                {this.renderMembers()}
                 <br />
                 <br />
                 <br />

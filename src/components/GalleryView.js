@@ -12,21 +12,21 @@ import {
     Col,
     CarouselIndicators,
     CarouselCaption,
-    UncontrolledCarousel 
+    UncontrolledCarousel
 }
 from "reactstrap";
 import {FaQuoteLeft, FaQuoteRight} from 'react-icons/fa';
 import VideoPlayer from './VideoPlayer';
 
-import { 
-    MDBCarousel, 
-    MDBCarouselInner, 
-    MDBCarouselItem, 
-    MDBView, 
-    MDBContainer 
+import {
+    MDBCarousel,
+    MDBCarouselInner,
+    MDBCarouselItem,
+    MDBView,
+    MDBContainer
   } from "mdbreact";
 
-export default class GalleryView extends Component { 
+export default class GalleryView extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -42,7 +42,7 @@ export default class GalleryView extends Component {
                 {
                     original: "/assets/images/Adisom/w_3.jpg",
                     thumbnail: "/assets/images/Adisom/w_3.jpg"
-                }              
+                }
             ],
           videosUrls: [
             'Adisom_video_1.mp4'
@@ -53,18 +53,18 @@ export default class GalleryView extends Component {
     renderVideos = () => {
         return(
           <div>
-                {this.state.videosUrls.map(item => 
-                    <VideoPlayer  
+                {this.state.videosUrls.map(item =>
+                    <VideoPlayer
                       videoUrl = {'/videos/' + item}
                       />
                   )}
-          </div> 
-        ) 
+          </div>
+        )
     }
 
     renderVideoCarousel = () => {
       return(
-        <div> 
+        <div>
            <MDBContainer style={{height: "30%", width: "60%"}}>
            <MDBCarousel
               activeItem={1}
@@ -73,7 +73,7 @@ export default class GalleryView extends Component {
               showIndicators={true}
               className="z-depth-1"
             >
-                <MDBCarouselInner> 
+                <MDBCarouselInner>
                     {this.renderVideos()}
                     </MDBCarouselInner>
               </MDBCarousel>
@@ -82,159 +82,159 @@ export default class GalleryView extends Component {
       )
     }
 
-    
+
     renderImageGallery = () => {
       return(
-        <div class="section-top-border">
+        <div className="section-top-border">
 				<h3>Image Gallery</h3>
-				<div class="row gallery-item">
-					<div class="col-md-4">
-						<a href="/assets/images/Adisom/w_1.jpg" class="img-pop-up">
-              <div 
-                class="single-gallery-image" 
+				<div className="row gallery-item">
+					<div className="col-md-4">
+						<a href="/assets/images/Adisom/w_1.jpg" className="img-pop-up">
+              <div
+                className="single-gallery-image"
                 style={{background: "url(/assets/images/Adisom/w_1.jpg"}}
                 >
                 </div>
 						</a>
 					</div>
-					<div class="col-md-4">
-						<a href="/assets/images/Adisom/w_2.jpg" class="img-pop-up">
-              <div 
-                class="single-gallery-image" 
+					<div className="col-md-4">
+						<a href="/assets/images/Adisom/w_2.jpg" className="img-pop-up">
+              <div
+                className="single-gallery-image"
                 style={{background: "url(/assets/images/Adisom/w_2.jpg)"}}
-                >                  
+                >
                 </div>
 						</a>
 					</div>
-					<div class="col-md-4">
-						<a href="/assets/images/Adisom/w_3.jpg" class="img-pop-up">
-              <div 
-                class="single-gallery-image" 
+					<div className="col-md-4">
+						<a href="/assets/images/Adisom/w_3.jpg" className="img-pop-up">
+              <div
+                className="single-gallery-image"
                 style={{background: "url(/assets/images/Adisom/w_3.jpg)"}}
                 >
                 </div>
 						</a>
 					</div>
-					<div class="col-md-6">
-						<a href="/assets/images/Adisom/w_4.jpg" class="img-pop-up">
-              <div 
-                class="single-gallery-image" 
+					<div className="col-md-6">
+						<a href="/assets/images/Adisom/w_4.jpg" className="img-pop-up">
+              <div
+                className="single-gallery-image"
                 style={{background: "url(/assets/images/Adisom/w_4.jpg)"}}
                 >
 
                 </div>
 						</a>
 					</div>
-					<div class="col-md-6">
-						<a href="/assets/images/Adisom/w_5.jpg" class="img-pop-up">
-              <div 
-                class="single-gallery-image" 
+					<div className="col-md-6">
+						<a href="/assets/images/Adisom/w_5.jpg" className="img-pop-up">
+              <div
+                className="single-gallery-image"
                 style={{background: "url(/assets/images/Adisom/w_5.jpg)"}}
                 >
 
                 </div>
 						</a>
 					</div>
-					<div class="col-md-4">
-						<a href="/assets/images/Adisom/w_6.jpg" class="img-pop-up">
-              <div 
-              class="single-gallery-image" 
+					<div className="col-md-4">
+						<a href="/assets/images/Adisom/w_6.jpg" className="img-pop-up">
+              <div
+              className="single-gallery-image"
               style={{background: "url(/assets/images/Adisom/w_6.jpg)"}}
               >
 
               </div>
 						</a>
 					</div>
-					<div class="col-md-4">
-						<a href="/assets/images/Adisom/w_7.jpg" class="img-pop-up">
-              <div 
-              class="single-gallery-image" 
+					<div className="col-md-4">
+						<a href="/assets/images/Adisom/w_7.jpg" className="img-pop-up">
+              <div
+              className="single-gallery-image"
               style={{background: "url(/assets/images/Adisom/w_7.jpg)"}}
               >
 
               </div>
 						</a>
 					</div>
-					<div class="col-md-4">
-						<a href="/assets/images/Adisom/w_8.jpg" class="img-pop-up">
-              <div 
-              class="single-gallery-image" 
+					<div className="col-md-4">
+						<a href="/assets/images/Adisom/w_8.jpg" className="img-pop-up">
+              <div
+              className="single-gallery-image"
               style={{background: "url(/assets/images/Adisom/w_8.jpg)"}}
               >
               </div>
 						</a>
 					</div>
-          <div class="col-md-4">
-						<a href="/assets/images/Adisom/w_9.jpg" class="img-pop-up">
-              <div 
-                class="single-gallery-image" 
+          <div className="col-md-4">
+						<a href="/assets/images/Adisom/w_9.jpg" className="img-pop-up">
+              <div
+                className="single-gallery-image"
                 style={{background: "url(/assets/images/Adisom/w_9.jpg"}}
                 >
                 </div>
 						</a>
 					</div>
-					<div class="col-md-4">
-						<a href="/assets/images/Adisom/w_10.jpg" class="img-pop-up">
-              <div 
-                class="single-gallery-image" 
+					<div className="col-md-4">
+						<a href="/assets/images/Adisom/w_10.jpg" className="img-pop-up">
+              <div
+                className="single-gallery-image"
                 style={{background: "url(/assets/images/Adisom/w_10.jpg)"}}
-                >                  
+                >
                 </div>
 						</a>
 					</div>
-					<div class="col-md-4">
-						<a href="/assets/images/Adisom/w_11.jpg" class="img-pop-up">
-              <div 
-                class="single-gallery-image" 
+					<div className="col-md-4">
+						<a href="/assets/images/Adisom/w_11.jpg" className="img-pop-up">
+              <div
+                className="single-gallery-image"
                 style={{background: "url(/assets/images/Adisom/w_11.jpg)"}}
                 >
                 </div>
 						</a>
 					</div>
-					<div class="col-md-6">
-						<a href="/assets/images/Adisom/w_12.jpg" class="img-pop-up">
-              <div 
-                class="single-gallery-image" 
+					<div className="col-md-6">
+						<a href="/assets/images/Adisom/w_12.jpg" className="img-pop-up">
+              <div
+                className="single-gallery-image"
                 style={{background: "url(/assets/images/Adisom/w_12.jpg)"}}
                 >
 
                 </div>
 						</a>
 					</div>
-					<div class="col-md-6">
-						<a href="/assets/images/Adisom/w_13.jpg" class="img-pop-up">
-              <div 
-                class="single-gallery-image" 
+					<div className="col-md-6">
+						<a href="/assets/images/Adisom/w_13.jpg" className="img-pop-up">
+              <div
+                className="single-gallery-image"
                 style={{background: "url(/assets/images/Adisom/w_13.jpg)"}}
                 >
 
                 </div>
 						</a>
 					</div>
-					<div class="col-md-4">
-						<a href="/assets/images/Adisom/w_14.jpg" class="img-pop-up">
-              <div 
-              class="single-gallery-image" 
+					<div className="col-md-4">
+						<a href="/assets/images/Adisom/w_14.jpg" className="img-pop-up">
+              <div
+              className="single-gallery-image"
               style={{background: "url(/assets/images/Adisom/w_14.jpg)"}}
               >
 
               </div>
 						</a>
 					</div>
-					<div class="col-md-4">
-						<a href="/assets/images/Adisom/w_15.jpg" class="img-pop-up">
-              <div 
-              class="single-gallery-image" 
+					<div className="col-md-4">
+						<a href="/assets/images/Adisom/w_15.jpg" className="img-pop-up">
+              <div
+              className="single-gallery-image"
               style={{background: "url(/assets/images/Adisom/w_15.jpg)"}}
               >
 
               </div>
 						</a>
 					</div>
-					<div class="col-md-4">
-						<a href="/assets/images/Adisom/w_16.jpg" class="img-pop-up">
-              <div 
-              class="single-gallery-image" 
+					<div className="col-md-4">
+						<a href="/assets/images/Adisom/w_16.jpg" className="img-pop-up">
+              <div
+              className="single-gallery-image"
               style={{background: "url(/assets/images/Adisom/w_16.jpg)"}}
               >
               </div>
@@ -247,10 +247,10 @@ export default class GalleryView extends Component {
 
     renderGalleryTextBelow = () => {
       return(
-        <section class="sample-text-area">
-		<div class="container box_1170">
-			<h3 class="text-heading">Text Sample</h3>
-			<p class="sample-text">
+        <section className="sample-text-area">
+		<div className="container box_1170">
+			<h3 className="text-heading">Text Sample</h3>
+			<p className="sample-text">
 				Every avid independent filmmaker has <b>Bold</b> about making that <i>Italic</i> interest documentary,
 				or short
 				film to show off their creative prowess. Many have great ideas and want to “wow”
@@ -277,13 +277,13 @@ export default class GalleryView extends Component {
 
     renderImageTextAbove = () => {
       return(
-        <section class="sample-text-area">
-		<div class="container box_1170">
+        <section className="sample-text-area">
+		<div className="container box_1170">
 			<h3 ><FaQuoteLeft /> Pictures speak a thousand words. <FaQuoteRight /> </h3>
-			<p class="sample-text">
+			<p className="sample-text">
         <br />
         In the image collection curated below, we have tried to document all of our major activities and achievements as we helped one another. < br />
-        A beautiful handiraft  collection of self-help groups we assisted also find their way here. 
+        A beautiful handiraft  collection of self-help groups we assisted also find their way here.
 			</p>
 		</div>
 	</section>
@@ -293,11 +293,11 @@ export default class GalleryView extends Component {
     render () {
         return(
           <div>
-            {this.renderImageTextAbove()} 
+            {this.renderImageTextAbove()}
             {this.renderImageGallery()}
             {/* {this.renderGalleryTextBelow()} */}
             {/* {this.renderVideos()} */}
-          </div> 
+          </div>
         )
     }
 }

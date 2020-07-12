@@ -8,28 +8,28 @@ export default class CoronaBlogView extends Component {
 
     renderBlogContent = () => {
         return(
-            <section class="blog_area single-post-area section-padding">
-            <div class="container">
-               <div class="row">
-                     <div class="single-post">
-                        <div class="feature-img">
-                           <img class="img-fluid" src="img/blog/single_blog_1.png" alt="" />
+            <section className="blog_area single-post-area section-padding">
+            <div className="container">
+               <div className="row">
+                     <div className="single-post">
+                        <div className="feature-img">
+                           <img className="img-fluid" src="img/blog/single_blog_1.png" alt="" />
                         </div>
-                        <div class="blog_details">
+                        <div className="blog_details">
                            <h1>The Corona Extension Hypothesis
                            </h1>
-                           <br /> 
-                           <ul class="blog-info-link mt-3 mb-4">
-                              <li><a href="#"><i class="fa fa-user"></i> CoronaVirus, Articles, Hypothesis, Creative Writing, Fiction</a></li>
+                           <br />
+                           <ul className="blog-info-link mt-3 mb-4">
+                              <li><a href="#"><i className="fa fa-user"></i> CoronaVirus, Articles, Hypothesis, Creative Writing, Fiction</a></li>
                         </ul>
-                           <p class="excert">
+                           <p className="excert">
                            A gutsy take on the ongoing COVID-19 pandemic because the best way to escape disaster, is to embrace it. I envisage this is how events might take a turn if the catastrophic activities do not begin to cease in a month or two. Here’s to hoping for a better future for everyone, but for now, let’s read what will happen if that doesn’t occur.
                            </p>
                            <p>
-                           
+
                            </p>
-                           <div class="quote-wrapper">
-                              <div class="quotes">
+                           <div className="quote-wrapper">
+                              <div className="quotes">
                               “Feed the demon or it’ll never let go, or is it: feed the demon and it’ll never let go?”
                               </div>
                            </div>
@@ -46,34 +46,34 @@ The deadly cloak of a fatal virus covers the globe. COVID-19, a variant of the p
                            <p> Schools, companies, commercial institutions, marketplaces — name a place, and its already shut. Stepping out for any reason is a big no-no. Don’t try it though, the police is ordered to detain any individual in public sight of them. So stay at home, or you’re going to have to stay in jail! Unless an individual isn’t out of their homes or resting shelter for medical reasons, or for state security protection motives; they are not to move out. Groceries and other essential items are delivered at homes by military personnel, fully geared for the task. No slacking is permitted as the disease just got given plague status a week ago. The virus is deadly, but still nothing compared to the poisons housed by some individuals in their minds. </p>
                            <p> “An idle mind cooks up a perfect disaster.” You see, the emptiness in people’s minds and lives led them to faulty opinions sprouted by illogicality, even more so than they already possessed it. Thus formed two schools of thought. Some argued that this plague is the perfect opportunity for population control. As widely accepted, world population has seen a massive growth in the past 50 years, leading to a multitude of difficulties in providing everyone with food, shelter, healthcare and other basic amenities. So it did make some wonder: Won’t be too much of a harm for some to perish, and their stronger counterparts to survive?</p>
                            <p>  Of course such morale-threatening ideas were thrashed for good reasons by the majority believing in the idea that every life was important. The problems birthed out of having a huge amount of people on this limited-resourced planet are still way smaller in magnitude than the misfortunes we’ll have on losing even one human resource. We’re all magnificently special, irreplaceable. This is really the only time to show everyone that they’re cared for. Reminding each other to wash hands and hydrate themselves, we make do for the lack of contact we have with our loved ones. </p>
-                           <p> One for all, all for better, together for the best. </p> 
-                           <p> Situations might seem unmanageable right now, and you feel like you’ve reached a dead end, just like in a labyrinth. It’s been too long, but you’re stuck at the same place, in the same maze. If things do change, it’s usually for the worst. You think it’s the end, time for a farewell. A nasty goodbye to comfort and love and all things sweet. This maze is the puzzle I can’t solve, and it’ll always be a failure to me. </p> 
-                           <p> I’ll always be a failure to me. </p> 
+                           <p> One for all, all for better, together for the best. </p>
+                           <p> Situations might seem unmanageable right now, and you feel like you’ve reached a dead end, just like in a labyrinth. It’s been too long, but you’re stuck at the same place, in the same maze. If things do change, it’s usually for the worst. You think it’s the end, time for a farewell. A nasty goodbye to comfort and love and all things sweet. This maze is the puzzle I can’t solve, and it’ll always be a failure to me. </p>
+                           <p> I’ll always be a failure to me. </p>
                            <p>But just when you least expect it, there’s a turn. This turn brings happiness. You get over your obstacles and smash your previous sense of defeat and triumph over it. Just a little effort from your side, and voila! The curse is lifted! Joy has returned. The maze you thought would never end, is now far behind you. A thing of the past, an achievement for the future.</p>
-                           <p> Just like this epidemic, all hurricanes sooner or later, end. We will make it through. It seems the worst when you’re in the eye of it, but once you’re out, all the worries you previously had seem to sound superficial. We eventually get over and move on. We have to. You always ascend to a better place. You have to. </p> 
-                           <p> You think life is sadness intermitted by temporary happiness. But that’s not it at all. Life starts on a melancholy note and onto other heart-rending scenarios, but somehow we always find our happiness and end on a jolly thought. </p> 
+                           <p> Just like this epidemic, all hurricanes sooner or later, end. We will make it through. It seems the worst when you’re in the eye of it, but once you’re out, all the worries you previously had seem to sound superficial. We eventually get over and move on. We have to. You always ascend to a better place. You have to. </p>
+                           <p> You think life is sadness intermitted by temporary happiness. But that’s not it at all. Life starts on a melancholy note and onto other heart-rending scenarios, but somehow we always find our happiness and end on a jolly thought. </p>
                            <p> Just like how this story did.</p>
                         </div>
                      </div>
-                     <div class="navigation-top">
-                        <div class="navigation-area">
-                           <div class="row">
+                     <div className="navigation-top">
+                        <div className="navigation-area">
+                           <div className="row">
                               <div
-                                 class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
-                                 
-                                 <div class="thumb">
+                                 className="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+
+                                 <div className="thumb">
                                     <a href="#">
-                                       <img class="img-fluid" src="img/post/next.png" alt="" />
+                                       <img className="img-fluid" src="img/post/next.png" alt="" />
                                     </a>
                                  </div>
                               </div>
                            </div>
                         </div>
                      </div>
-                     <div class="blog-author">
-                        <div class="media align-items-center">
+                     <div className="blog-author">
+                        <div className="media align-items-center">
                            <img src="/assets/images/shola.png" alt="" />
-                           <div class="media-body">
+                           <div className="media-body">
                               <a href="#">
                                  <h4>Saumya Chaturvedi</h4>
                               </a>
@@ -81,8 +81,8 @@ The deadly cloak of a fatal virus covers the globe. COVID-19, a variant of the p
                            </div>
                         </div>
                      </div>
-                  <div class="col-lg-4">
-                     <div class="blog_right_sidebar">
+                  <div className="col-lg-4">
+                     <div className="blog_right_sidebar">
                      </div>
                   </div>
                </div>
@@ -93,9 +93,9 @@ The deadly cloak of a fatal virus covers the globe. COVID-19, a variant of the p
 
     render() {
         return(
-            <div> 
+            <div>
                 {this.renderBlogContent()}
-                </div> 
+                </div>
         )
     }
 }

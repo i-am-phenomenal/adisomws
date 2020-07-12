@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import {
-    Card, 
+    Card,
     CardBody,
     CardImg,
     CardTitle,
     CardSubtitle,
     CardText,
-    Form, 
-    FormGroup, 
-    Label, 
-    Input, 
+    Form,
+    FormGroup,
+    Label,
+    Input,
     FormText,
     Button,
     Container,
@@ -35,7 +35,7 @@ export default class ContactUsView extends Component {
 
     renderDetailsSection= () => {
         return(
-            <div> 
+            <div>
                 <br />
                 <br />
                 <br />
@@ -51,7 +51,7 @@ export default class ContactUsView extends Component {
                     <CardTitle> testing.purposes.adisom@gmail.com</CardTitle>
                     </CardBody>
                 </Card>
-            </div> 
+            </div>
         )
     }
 
@@ -66,9 +66,9 @@ export default class ContactUsView extends Component {
 
     validateDataAndSendEmail = (event) => {
         event.preventDefault();
-        let formParams = this.state.formParams;        
-        if (formParams.name === "" 
-            || formParams.email === "" 
+        let formParams = this.state.formParams;
+        if (formParams.name === ""
+            || formParams.email === ""
             || formParams.subject === ""
             || formParams.message === ""
             || !(this.isEmailValidated(formParams.email))
@@ -95,7 +95,7 @@ export default class ContactUsView extends Component {
                     subject: "",
                     message: ""
                 }
-        
+
                 this.setState({formParams: updatedFormDetails});
             }
     }
@@ -121,19 +121,19 @@ export default class ContactUsView extends Component {
                 currentObject.name = value;
                 break;
 
-            case "email": 
+            case "email":
                 currentObject.email = value;
-                break; 
+                break;
 
-            case "subject": 
+            case "subject":
                 currentObject.subject = value;
                 break;
 
-            case "message": 
+            case "message":
                 currentObject.message = value;
                 break;
 
-            default: 
+            default:
                 break;
         }
         this.setState({formParams: currentObject});
@@ -145,54 +145,54 @@ export default class ContactUsView extends Component {
             <Form>
                 <FormGroup>
                     <Label for="namel">Name</Label>
-                    <Input 
-                        type="name" 
-                        name="name" 
-                        id="name" 
-                        placeholder="Enter your name." 
-                        value={formDetails.name} 
+                    <Input
+                        type="name"
+                        name="name"
+                        id="name"
+                        placeholder="Enter your name."
+                        value={formDetails.name}
                         onChange={(e) => this.handleChange("name", e)}
                     />
                 </FormGroup>
                 <FormGroup>
                     <Label for="email">Email</Label>
-                    <Input 
-                        type="email" 
-                        name="email" 
-                        id="email" 
-                        placeholder="Enter your Email." 
-                        value={formDetails.emails} 
+                    <Input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Enter your Email."
+                        value={formDetails.emails}
                         onChange={(e) => this.handleChange("email", e)}
                     />
                 </FormGroup>
                 <FormGroup>
                     <Label for="phone">Phone Number</Label>
-                    <Input 
-                        type="phone" 
-                        name="phone" 
-                        id="phone" 
-                        placeholder="Enter your Phone Number." 
+                    <Input
+                        type="phone"
+                        name="phone"
+                        id="phone"
+                        placeholder="Enter your Phone Number."
                         value={formDetails.phoneNumber}
                         onChange={(e) => this.handleChange("phone", e)}
                         />
                 </FormGroup>
                 <FormGroup>
                     <Label for="address">Address</Label>
-                    <Input 
-                        type="address" 
-                        name="address" 
-                        id="address" 
-                        placeholder="Enter your address." 
+                    <Input
+                        type="address"
+                        name="address"
+                        id="address"
+                        placeholder="Enter your address."
                         value={formDetails.address}
                         onChange={(e) => this.handleChange("address", e)}
                         />
                 </FormGroup>
                 <FormGroup>
                     <Label for="message">Message</Label>
-                    <Input 
-                        type="textarea" 
-                        name="message" 
-                        id="message" 
+                    <Input
+                        type="textarea"
+                        name="message"
+                        id="message"
                         value={formDetails.message}
                         placeholder="Enter your message to us."
                         onChange={(e) => this.handleChange("message", e)}
@@ -208,110 +208,110 @@ export default class ContactUsView extends Component {
 
     renderFormContainer = () => {
         return(
-            <Container> 
-                <Row> 
+            <Container>
+                <Row>
                     <Col xs="7"> {this.renderForm()} </Col>
-                    <Col xs="5"> 
+                    <Col xs="5">
                     <img
                         src = "/assets/images/contact_us_image.jpg"
                         alt="First slide"
                       />
                      </Col>
-                    </Row>              
+                    </Row>
             </Container>
         )
     }
 
     renderContactUsForm = () => {
         return(
-            <div> 
-                    <br /> 
-                    <br /> 
-                    <br /> 
+            <div>
+                    <br />
+                    <br />
+                    <br />
                     <h2> <b> Helpdesk </b> </h2>
-                    <p> For any grievance, suggestions and queries, kindly write to us. </p> 
-                    <p> <i> * All fields are mandatory </i> </p> 
+                    <p> For any grievance, suggestions and queries, kindly write to us. </p>
+                    <p> <i> * All fields are mandatory </i> </p>
                     {this.renderFormContainer()}
-                </div> 
+                </div>
         )
     }
 
     renderContactForm = () => {
         let details = this.state.formParams;
         return(
-            <div class="row">
-                    <div class="col-12">
-                        <h2 class="contact-title">Get in Touch</h2>
+            <div className="row">
+                    <div className="col-12">
+                        <h2 className="contact-title">Get in Touch</h2>
                     </div>
-                    <div class="col-lg-8">
-                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <textarea 
-                                            class="form-control w-100" 
-                                            name="message" 
-                                            id="message" 
-                                            cols="30" 
-                                            rows="9" 
-                                            onfocus="this.placeholder = ''" 
-                                            onblur="this.placeholder = 'Enter Message'" 
+                    <div className="col-lg-8">
+                        <form className="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                            <div className="row">
+                                <div className="col-12">
+                                    <div className="form-group">
+                                        <textarea
+                                            className="form-control w-100"
+                                            name="message"
+                                            id="message"
+                                            cols="30"
+                                            rows="9"
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Enter Message'"
                                             placeholder="Enter your message"
                                             value = {details.message}
                                             onChange = {(e) => this.handleChange(e, "message")}
-                                            />                                            
+                                            />
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input 
-                                            class="form-control valid" 
-                                            name="name" 
-                                            id="name" 
-                                            type="text" 
-                                            onfocus="this.placeholder = ''" 
-                                            onblur="this.placeholder = 'Enter your name'" 
-                                            placeholder="Enter your name" 
+                                <div className="col-sm-6">
+                                    <div className="form-group">
+                                        <input
+                                            className="form-control valid"
+                                            name="name"
+                                            id="name"
+                                            type="text"
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Enter your name'"
+                                            placeholder="Enter your name"
                                             value = {details.name}
                                             onChange = {(e) => this.handleChange(e, "name")}
                                             />
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input 
-                                            class="form-control valid" 
-                                            name="email" 
-                                            id="email" 
-                                            type="email" 
-                                            onfocus="this.placeholder = ''" 
-                                            onblur="this.placeholder = 'Enter email address'" 
-                                            placeholder="Email" 
+                                <div className="col-sm-6">
+                                    <div className="form-group">
+                                        <input
+                                            className="form-control valid"
+                                            name="email"
+                                            id="email"
+                                            type="email"
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Enter email address'"
+                                            placeholder="Email"
                                             value = {details.email}
                                             onChange = {(e) => this.handleChange(e, "email")}
                                             />
                                     </div>
                                 </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <input 
-                                            class="form-control" 
-                                            name="subject" 
-                                            id="subject" 
-                                            type="text" 
-                                            onfocus="this.placeholder = ''" 
-                                            onblur="this.placeholder = 'Enter Subject'" 
-                                            placeholder="Enter Subject" 
+                                <div className="col-12">
+                                    <div className="form-group">
+                                        <input
+                                            className="form-control"
+                                            name="subject"
+                                            id="subject"
+                                            type="text"
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Enter Subject'"
+                                            placeholder="Enter Subject"
                                             value = {details.subject}
                                             onChange = {(e) => this.handleChange(e, "subject")}
                                             />
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group mt-3">
-                                <button 
-                                    type="submit" 
-                                    class="button button-contactForm boxed-btn"
+                            <div className="form-group mt-3">
+                                <button
+                                    type="submit"
+                                    className="button button-contactForm boxed-btn"
                                     onClick = {(event) => this.validateDataAndSendEmail(event)}
                                     >
                                         Send
@@ -320,10 +320,10 @@ export default class ContactUsView extends Component {
                                     &nbsp;
                                     &nbsp;
                                     &nbsp;
-                                    
-                                    <button                                    
-                                    type="submit" 
-                                    class="button button-contactForm boxed-btn"
+
+                                    <button
+                                    type="submit"
+                                    className="button button-contactForm boxed-btn"
                                     onClick={(e) => this.resetAllFields(e)}
                                     >
                                         Reset
@@ -331,24 +331,24 @@ export default class ContactUsView extends Component {
                             </div>
                         </form>
                     </div>
-                    <div class="col-lg-3 offset-lg-1">
-                        <div class="media contact-info">
-                            <span class="contact-info__icon"><i class="ti-home"></i></span>
-                            <div class="media-body">
+                    <div className="col-lg-3 offset-lg-1">
+                        <div className="media contact-info">
+                            <span className="contact-info__icon"><i className="ti-home"></i></span>
+                            <div className="media-body">
                                 <h3>F-14/20, Krishna Nagar</h3>
                                 <p>New Delhi - 110051</p>
                             </div>
                         </div>
-                        <div class="media contact-info">
-                            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
-                            <div class="media-body">
+                        <div className="media contact-info">
+                            <span className="contact-info__icon"><i className="ti-tablet"></i></span>
+                            <div className="media-body">
                                 <h3>+91 9873196224</h3>
                                 <p>Mon to Fri 9am to 6pm</p>
                             </div>
                         </div>
-                        <div class="media contact-info">
-                            <span class="contact-info__icon"><i class="ti-email"></i></span>
-                            <div class="media-body">
+                        <div className="media contact-info">
+                            <span className="contact-info__icon"><i className="ti-email"></i></span>
+                            <div className="media-body">
                                 <h3>adisomwelfaresociety@gmail.com</h3>
                                 <p>Send us your query anytime!</p>
                             </div>
@@ -359,12 +359,12 @@ export default class ContactUsView extends Component {
     }
 
     renderMembers = () => {
-        return( 
-            <div class="volunteers_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="section_title text-center mb-60">
+        return(
+            <div className="volunteers_area">
+        <div className="container">
+            <div className="row">
+                <div className="col-xl-12">
+                    <div className="section_title text-center mb-60">
                         <span>Meet our </span>
                         <h3>
                             Team
@@ -372,74 +372,74 @@ export default class ContactUsView extends Component {
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xl-3 col-md-6">
-                    <div class="single_volunteer">
-                        <div class="thumb">
+            <div className="row">
+                <div className="col-xl-3 col-md-6">
+                    <div className="single_volunteer">
+                        <div className="thumb">
                             <img src="/assets/images/Adisom/Member_1.jpg" alt="" />
-                            {/* <div class="social_links">
+                            {/* <div className="social_links">
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                    <li><a href="#"><i className="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i className="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i className="fa fa-linkedin-square"></i></a></li>
                                 </ul>
                             </div> */}
                         </div>
-                        <div class="author_name text-center">
+                        <div className="author_name text-center">
                             <h3>Mrs Priyanka Chaturvedi </h3>
                             <span>President</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="single_volunteer">
-                        <div class="thumb">
+                <div className="col-xl-3 col-md-6">
+                    <div className="single_volunteer">
+                        <div className="thumb">
                             <img src="/assets/images/Adisom/Member_2.jpg" alt="" />
-                            {/* <div class="social_links">
+                            {/* <div className="social_links">
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                    <li><a href="#"><i className="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i className="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i className="fa fa-linkedin-square"></i></a></li>
                                 </ul>
                             </div> */}
                         </div>
-                        <div class="author_name text-center">
+                        <div className="author_name text-center">
                             <h3>Mr Atul Kumar</h3>
                             <span>Vice President </span>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="single_volunteer">
-                        <div class="thumb">
+                <div className="col-xl-3 col-md-6">
+                    <div className="single_volunteer">
+                        <div className="thumb">
                             <img src="/assets/images/Adisom/Member_3.jpg" alt="" />
-                            {/* <div class="social_links">
+                            {/* <div className="social_links">
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                    <li><a href="#"><i className="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i className="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i className="fa fa-linkedin-square"></i></a></li>
                                 </ul>
                             </div> */}
                         </div>
-                        <div class="author_name text-center">
+                        <div className="author_name text-center">
                             <h3>Ms Priya Chaturvedi</h3>
                             <span>Treasurer</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="single_volunteer">
-                        <div class="thumb">
+                <div className="col-xl-3 col-md-6">
+                    <div className="single_volunteer">
+                        <div className="thumb">
                             <img src="/assets/images/Adisom/Member_4.jpg" alt="" />
-                            {/* <div class="social_links">
+                            {/* <div className="social_links">
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                    <li><a href="#"><i className="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i className="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i className="fa fa-linkedin-square"></i></a></li>
                                 </ul>
                             </div> */}
                         </div>
-                        <div class="author_name text-center">
+                        <div className="author_name text-center">
                             <h3>Mrs Sunita Sharma</h3>
                             <span>Member</span>
                         </div>
@@ -453,19 +453,19 @@ export default class ContactUsView extends Component {
 
     render() {
         return(
-            <div> 
+            <div>
                 {this.renderMembers()}
                 <br />
                 <br />
                 <br />
                 <br />
-                <MapContainer /> 
+                <MapContainer />
                 <br />
                 <br />
-                
-                {this.renderContactForm()}                
-                <br /> 
-                <br /> 
+
+                {this.renderContactForm()}
+                <br />
+                <br />
             </div>
         )
     }

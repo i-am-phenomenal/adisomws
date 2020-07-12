@@ -73,31 +73,31 @@ export default class App extends Component {
         return(
           <Router>
             <Switch>
-                <Route path = "/blogs/corona_extension_hypothesis/"> 
-                    <CoronaBlogView /> 
-                </Route> 
-                <Route path = "/blogs/perception_of_memory/"> 
-                    <PerceptionOfMemoryView /> 
-                </Route> 
-                <Route path = "/blogs/ode_to_murakami/"> 
-                    <MurakamiBlog /> 
-                </Route> 
-                <Route path = "/blogs/can_you_see_me/"> 
-                    <CanYouSeeMeBlog /> 
-                </Route> 
+                <Route path = "/blogs/corona_extension_hypothesis/">
+                    <CoronaBlogView />
+                </Route>
+                <Route path = "/blogs/perception_of_memory/">
+                    <PerceptionOfMemoryView />
+                </Route>
+                <Route path = "/blogs/ode_to_murakami/">
+                    <MurakamiBlog />
+                </Route>
+                <Route path = "/blogs/can_you_see_me/">
+                    <CanYouSeeMeBlog />
+                </Route>
               <Route path="/about_us/">
                 <AboutUsView />
               </Route>
-              <Route path="/our_work/"> 
-                <OurWorkView /> 
-              </Route>  
-              <Route path="/contact_us/"> 
-                <ContactUsView /> 
-                </Route> 
+              <Route path="/our_work/">
+                <OurWorkView />
+              </Route>
+              <Route path="/contact_us/">
+                <ContactUsView />
+                </Route>
                 <Route path="/gallery/">
-                    <GalleryView />   
-                  </Route> 
-                  <Route path="/blog/"> 
+                    <GalleryView />
+                  </Route>
+                  <Route path="/blog/">
                     <BlogView />
                   </Route>
             </Switch>
@@ -109,42 +109,42 @@ export default class App extends Component {
           let currentWindow = window.location.href.split("/").reverse()[1];
 
           switch (currentWindow) {
-                case "about_us": 
+                case "about_us":
                     return (
-                        <h3> About Us </h3> 
+                        <h3> About Us </h3>
                         )
                     break;
 
                 case "blog":
                     return (
-                        <h3>Blog</h3> 
-                    )
-                    break; 
-
-                case "contact_us": 
-                    return (
-                        <h3> Contact Us </h3> 
+                        <h3>Blog</h3>
                     )
                     break;
-                    
+
+                case "contact_us":
+                    return (
+                        <h3> Contact Us </h3>
+                    )
+                    break;
+
                 case "gallery":
                     return(
-                        <h3> Gallery </h3> 
+                        <h3> Gallery </h3>
                     )
                     break;
 
-                case "localhost:3000": 
+                case "localhost:3000":
                     return(
-                        <div> 
+                        <div>
                             <h3>Support the Causes <br />
                                     You Care About</h3>
                                 <p>At Adisom Welfare Foundation we believe that everyone has the right to be <br />
                                     cared for and the right to be protected </p>
-                        </div> 
+                        </div>
                     )
                     break;
 
-                default: 
+                default:
                         return("")
                         break
           }
@@ -152,13 +152,13 @@ export default class App extends Component {
 
       renderBanner = () => {
         return(
-          <div class="slider_area slider_bg_1 d-flex align-items-center">
-          <div class="container">
-              <div class="row">
-                  <div class="col-xl-12">
-                      <div class="single_slider">
-                          <div class="slider_text">
-                            {this.getUpdatedBannerText()}  
+          <div className="slider_area slider_bg_1 d-flex align-items-center">
+          <div className="container">
+              <div className="row">
+                  <div className="col-xl-12">
+                      <div className="single_slider">
+                          <div className="slider_text">
+                            {this.getUpdatedBannerText()}
                           </div>
                       </div>
                   </div>
@@ -170,33 +170,33 @@ export default class App extends Component {
 
       renderAboutUsInfo = () => {
         return(
-          <div class="about_area gray-bg">
-              <div class="container">
-                  <div class="row align-items-center">
-                      <div class="col-xl-6 col-md-6">
-                          <div class="about_thumb">
+          <div className="about_area gray-bg">
+              <div className="container">
+                  <div className="row align-items-center">
+                      <div className="col-xl-6 col-md-6">
+                          <div className="about_thumb">
                               <img src="/assets/images/about.png" alt="" />
-                              <div class="served_over">
+                              <div className="served_over">
                                   <span>SERVED OVER</span>
                                   <h3>1000+ </h3>
                                   <p>PEOPLE DURING THE COVID-19 PANDEMIC </p>
                               </div>
                           </div>
                       </div>
-                      <div class="col-xl-6 col-md-6">
-                          <div class="about_right">
-                              <div class="section_title">
+                      <div className="col-xl-6 col-md-6">
+                          <div className="about_right">
+                              <div className="section_title">
                                   <span>About Us</span>
                                   <h3>
                                   One for all, all for better, together for the best.
                                   </h3>
                               </div>
-                              <p> 
-                              < br /> 
+                              <p>
+                              < br />
                                     In times of undulating and unpredictable pandemic, where everyone rightfully prioritizes individual safety, we found it optimum
-                                    to serve our country and our fellow brothers residing in not-so-opportune living conditions. < br />  < br /> Adisom Welfare Foundation works towards 
+                                    to serve our country and our fellow brothers residing in not-so-opportune living conditions. < br />  < br /> Adisom Welfare Foundation works towards
                                     a variety of causes : provision of food, sanitary equipments, skill development and upliftment amongst necessary encouragement and financial support to small self-help
-                                    industries to flourish. In all this, the very core principal underlying this multi functional NGO onyl highligt one motto  "Violation of even one man's identity is a threat to 
+                                    industries to flourish. In all this, the very core principal underlying this multi functional NGO onyl highligt one motto  "Violation of even one man's identity is a threat to
                                     every man's security."
                                   </p>
                           </div>
@@ -209,11 +209,11 @@ export default class App extends Component {
 
       renderServiceArea = () => {
         return(
-          <div class="servce_area">
-              <div class="container">
-                  <div class="row">
-                      <div class="col-xl-12">
-                          <div class="section_title text-center mb-60">
+          <div className="servce_area">
+              <div className="container">
+                  <div className="row">
+                      <div className="col-xl-12">
+                          <div className="section_title text-center mb-60">
                               <span>We Work For</span>
                               <h3>
                                   The Betterment Of Society
@@ -221,62 +221,62 @@ export default class App extends Component {
                           </div>
                       </div>
                   </div>
-                  <div class="row">
-                      <div class="col-xl-4 col-md-4">
-                          <div class="single_serve text-center">
-                              <div class="serve_icon">                        
+                  <div className="row">
+                      <div className="col-xl-4 col-md-4">
+                          <div className="single_serve text-center">
+                              <div className="serve_icon">
                                   <GiHamburger />
                               </div>
                               <h3>Pure Food & Water</h3>
-                              <p> A small lockdown sprouted initiative slowly expanded to one of our biggest expenditures in providing 
-                                  basic meal packets to unfortunate families in our neighbourhood and hospitals. </p> 
+                              <p> A small lockdown sprouted initiative slowly expanded to one of our biggest expenditures in providing
+                                  basic meal packets to unfortunate families in our neighbourhood and hospitals. </p>
                           </div>
                       </div>
-                      <div class="col-xl-4 col-md-4">
-                          <div class="single_serve text-center">
-                              <div class="serve_icon">
+                      <div className="col-xl-4 col-md-4">
+                          <div className="single_serve text-center">
+                              <div className="serve_icon">
                                   <GiMedicines />
                               </div>
                               <h3>Medicine</h3>
-                              <p>  This includes, but is not restricted to provision of sanitizers, health-care masks, gloves and decontamination sprays. </p> 
+                              <p>  This includes, but is not restricted to provision of sanitizers, health-care masks, gloves and decontamination sprays. </p>
                           </div>
                       </div>
-                      <div class="col-xl-4 col-md-4">
-                          <div class="single_serve text-center">
-                              <div class="serve_icon">
+                      <div className="col-xl-4 col-md-4">
+                          <div className="single_serve text-center">
+                              <div className="serve_icon">
                                   <GiBookshelf />
                               </div>
                               <h3>Education</h3>
-                              <p> We are devoted to spreading the light of education in dimly illuminated areas where it finds difficult to reach. 
-                                    We also support skill development for youth individuals. </p> 
+                              <p> We are devoted to spreading the light of education in dimly illuminated areas where it finds difficult to reach.
+                                    We also support skill development for youth individuals. </p>
                           </div>
                       </div>
                   </div>
               </div>
-          </div>      
+          </div>
         )
       }
 
       renderHeader = () => {
         return(
           <header>
-          <div class="header-area ">
-              <div id="sticky-header" class="main-header-area">
-                  <div class="container-fluid p-0">
-                      <div class="row align-items-center justify-content-between no-gutters">
-                          <div class="col-xl-2 col-lg-2">
-                              <div class="logo-img">
+          <div className="header-area ">
+              <div id="sticky-header" className="main-header-area">
+                  <div className="container-fluid p-0">
+                      <div className="row align-items-center justify-content-between no-gutters">
+                          <div className="col-xl-2 col-lg-2">
+                              <div className="logo-img">
                                   <a href="">
                                       <img src="/assets/images/Adisom/NGO logo.jpg" alt="" />
                                   </a>
                               </div>
                           </div>
-                          <div class="col-xl-7 col-lg-7">
-                              <div class="main-menu  d-none d-lg-block">
+                          <div className="col-xl-7 col-lg-7">
+                              <div className="main-menu  d-none d-lg-block">
                                   <nav>
                                       <ul id="navigation">
-                                          <li><a class="active" href="/">Home</a></li>
-                                          <li><a href="/about_us/" >About</a></li>  
+                                          <li><a className="active" href="/">Home</a></li>
+                                          <li><a href="/about_us/" >About</a></li>
                                           <li><a href="/blog/">blog</a></li>
                                           <li><a href="/gallery/">Gallery</a></li>
                                           <li><a href="/contact_us/">Contact</a></li>
@@ -284,10 +284,10 @@ export default class App extends Component {
                                   </nav>
                               </div>
                           </div>
-                          <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                          <div className="col-xl-3 col-lg-3 d-none d-lg-block">
                           </div>
-                          <div class="col-12">
-                              <div class="mobile_menu d-block d-lg-none"></div>
+                          <div className="col-12">
+                              <div className="mobile_menu d-block d-lg-none"></div>
                           </div>
                       </div>
                   </div>
@@ -300,7 +300,7 @@ export default class App extends Component {
       handlePageScroll = (event) => {
           let element = document.getElementById("sticky-header");
           var sticky = window.pageYOffset;
-          if (sticky < 400) {  
+          if (sticky < 400) {
             element.classList.remove("sticky");
           } else {
             element.classList.add("sticky");
@@ -309,17 +309,17 @@ export default class App extends Component {
 
         renderFooter = () => {
           return(
-            <footer class="footer">
-        <div class="footer_top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-3 col-md-6 col-lg-3">
-                    <div class="footer_widget">
-                            <h3 class="footer_title">
-                               Follow us 
+            <footer className="footer">
+        <div className="footer_top">
+            <div className="container">
+                <div className="row">
+                    <div className="col-xl-3 col-md-6 col-lg-3">
+                    <div className="footer_widget">
+                            <h3 className="footer_title">
+                               Follow us
                             </h3>
-                            </div> 
-                    <div class="socail_links">
+                            </div>
+                    <div className="socail_links">
                                 <ul>
                                     <li>
                                         <a href="https://www.facebook.com/adisomsociety/" title="Facebook">
@@ -333,39 +333,39 @@ export default class App extends Component {
                                     </li>
                                     <li>
                                         <a href="https://www.instagram.com/adisomwelfaresociety/" title="Instagram">
-                                            <FaInstagramSquare /> 
+                                            <FaInstagramSquare />
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://www.medium.com/@chaturvedipriyanka6224/" title="Medium">
-                                            <FaMedium /> 
+                                            <FaMedium />
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                        {/* <div class="footer_widget">
-                            <h3 class="footer_title">
+                        {/* <div className="footer_widget">
+                            <h3 className="footer_title">
                                 Join With Us
                             </h3>
-                            <p class="footer_text doanar"> <a class="first" href="#">Become a Volunteer</a> <br /><a
+                            <p className="footer_text doanar"> <a className="first" href="#">Become a Volunteer</a> <br /><a
                                     href="#">Become a Donor</a></p>
 
                         </div> */}
                     </div>
-                    <div class="col-xl-3 col-md-6 col-lg-3">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
+                    <div className="col-xl-3 col-md-6 col-lg-3">
+                        <div className="footer_widget">
+                            <h3 className="footer_title">
                                 address
                             </h3>
-                            <p class="footer_text">F-14/20, Krishna Nagar, Delhi-110051 <br />
+                            <p className="footer_text">F-14/20, Krishna Nagar, Delhi-110051 <br />
                                 + 91 9873196224 <br />
-                                <a class="domain" href="#">adisomwelfaresociety@gmail.com</a></p>
-                            
+                                <a className="domain" href="#">adisomwelfaresociety@gmail.com</a></p>
+
                         </div>
                     </div>
-                    <div class="col-xl-2 col-md-6 col-lg-2">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
+                    <div className="col-xl-2 col-md-6 col-lg-2">
+                        <div className="footer_widget">
+                            <h3 className="footer_title">
                                 Navigation
                             </h3>
                             <ul>
@@ -377,27 +377,27 @@ export default class App extends Component {
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-6 col-lg-4">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
+                    <div className="col-xl-4 col-md-6 col-lg-4">
+                        <div className="footer_widget">
+                            <h3 className="footer_title">
                                 Newsletter
                             </h3>
-                            <form action="#" class="newsletter_form">
+                            <form action="#" className="newsletter_form">
                                 <input type="text" placeholder="Enter your mail" />
                                 <button type="submit">Sign Up</button>
                             </form>
-                            <p class="newsletter_text">Subscribe newsletter to get updates</p>
+                            <p className="newsletter_text">Subscribe newsletter to get updates</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="copy-right_text">
-            <div class="container">
-                <div class="footer_border"></div>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <p class="copy_right text-center">
+        <div className="copy-right_text">
+            <div className="container">
+                <div className="footer_border"></div>
+                <div className="row">
+                    <div className="col-xl-12">
+                        <p className="copy_right text-center">
                         </p>
                     </div>
                 </div>
@@ -411,10 +411,10 @@ export default class App extends Component {
           let currentPage = window.location.href.split("/").reverse()[1];
           if (currentPage == "localhost:3000") {
             return(
-              <div> 
+              <div>
                     {this.renderAboutUsInfo()}
                     {this.renderServiceArea()}
-                </div> 
+                </div>
             )
           } else {
             return("")

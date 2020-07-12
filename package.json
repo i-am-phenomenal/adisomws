@@ -7,7 +7,9 @@
     "npm": "6.x"
   },
   "dependencies": {
-    "@babel/core": "7.9.0",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
     "@svgr/webpack": "4.3.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -16,7 +18,7 @@
     "@typescript-eslint/parser": "^2.10.0",
     "babel-eslint": "10.1.0",
     "babel-jest": "^24.9.0",
-    "babel-loader": "8.1.0",
+    "babel-loader": "^8.1.0",
     "babel-plugin-named-asset-import": "^0.3.6",
     "babel-preset-react-app": "^9.1.2",
     "bootstrap": "^4.4.1",
@@ -43,11 +45,14 @@
     "jest-environment-jsdom-fourteen": "1.0.1",
     "jest-resolve": "24.9.0",
     "jest-watch-typeahead": "0.4.2",
+    "jquery": "^3.5.1",
     "mdbreact": "^4.25.5",
     "mini-css-extract-plugin": "0.9.0",
     "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "pnp-webpack-plugin": "1.6.4",
+    "postcss-cli": "^7.1.1",
+    "postcss-custom-properties": "^9.1.1",
     "postcss-flexbugs-fixes": "4.1.0",
     "postcss-loader": "3.0.0",
     "postcss-normalize": "8.0.1",
@@ -61,6 +66,7 @@
     "react-image-gallery": "^1.0.7",
     "react-player": "^2.0.1",
     "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.1",
     "reactstrap": "^8.4.1",
     "resolve": "1.15.0",
     "resolve-url-loader": "^3.1.1",
@@ -72,16 +78,18 @@
     "url-loader": "2.3.0",
     "video-react": "^0.14.1",
     "webpack": "4.42.0",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "3.10.3",
     "webpack-manifest-plugin": "2.2.0",
     "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"    
+    "postbuild": "postcss --use postcss-custom-properties --replace build/**/*.css"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -150,7 +158,8 @@
   },
   "babel": {
     "presets": [
-      "react-app"
+      "react-app",
+      "es2015"
     ]
   }
 }

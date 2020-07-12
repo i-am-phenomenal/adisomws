@@ -8,17 +8,17 @@ export default class CanYouSeeMeBlog extends Component {
 
     renderBlogContent = () => {
         return(
-            <section class="blog_area single-post-area section-padding">
-            <div class="container">
-               <div class="row">
-                     <div class="single-post">
-                        <div class="feature-img">
-                           <img class="img-fluid" src="img/blog/single_blog_1.png" alt="" />
+            <section className="blog_area single-post-area section-padding">
+            <div className="container">
+               <div className="row">
+                     <div className="single-post">
+                        <div className="feature-img">
+                           <img className="img-fluid" src="img/blog/single_blog_1.png" alt="" />
                         </div>
-                        <div class="blog_details">
+                        <div className="blog_details">
                            <h1>Can you see me?
                            </h1>
-                           <br /> 
+                           <br />
                            <p>
                            Greetings, fellow internet zombies.
                            </p>
@@ -30,49 +30,49 @@ export default class CanYouSeeMeBlog extends Component {
                            <p>My writing style definitely went through a puberty of its own as seasons changed and so did twitter trending topics. From writing poems about how trees are green and happy, to articles about how deforestation is real and sappy; the years went by.</p>
                            <p>On one hand, I bring with me informative snippy little bits of data on stirring issues that actually matter. And on the other hand, I pen down swirling vortexes of indecipherable emotions that I like to call “poetry”. Mostly I work with merry verses that light up my mind, but the few times I access the not-so-cheery tempers, the results are powerful. And baffling.</p>
                            <p>On this blog, I leave behind the truest pieces of my soul, via the most veracious way I know of representing them. Writing seldom makes me feel like an artsy architect that created a paradoxical staircase: one that neither descends or ascends, when I force myself to make sense of a string of letters, never meant to be stringed together. But penning these thoughts down mostly makes me float, being gifted with the ability to make the clouds below me drain, without anybody getting wet.</p>
-                           <p>Okay, I’m out of my word labyrinth. Don’t look for the point: there isn’t any. There is no need for one. Albeit I am super excited to be able to blog my ideas and get mass attention on them. I look forward to you looking forward to my works (see what I did there?) and hope to showcase my best.</p> 
-                           <p> Welcome to the castle of make-believe content, and fancy metaphors. Here the only princess you need to save is yourself. Can you outrun the riddling maze, or should I ask, do you even want to?</p> 
+                           <p>Okay, I’m out of my word labyrinth. Don’t look for the point: there isn’t any. There is no need for one. Albeit I am super excited to be able to blog my ideas and get mass attention on them. I look forward to you looking forward to my works (see what I did there?) and hope to showcase my best.</p>
+                           <p> Welcome to the castle of make-believe content, and fancy metaphors. Here the only princess you need to save is yourself. Can you outrun the riddling maze, or should I ask, do you even want to?</p>
                         </div>
                      </div>
-                     <div class="navigation-top">
-                        <div class="d-sm-flex justify-content-between text-center">
-                           <ul class="social-icons">
-                              <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                              <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                              <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                     <div className="navigation-top">
+                        <div className="d-sm-flex justify-content-between text-center">
+                           <ul className="social-icons">
+                              <li><a href="#"><i className="fa fa-facebook-f"></i></a></li>
+                              <li><a href="#"><i className="fa fa-twitter"></i></a></li>
+                              <li><a href="#"><i className="fa fa-dribbble"></i></a></li>
+                              <li><a href="#"><i className="fa fa-behance"></i></a></li>
                            </ul>
                         </div>
-                        <div class="navigation-area">
-                           <div class="row">
+                        <div className="navigation-area">
+                           <div className="row">
                               <div
-                                 class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
-                                 <div class="thumb">
+                                 className="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
+                                 <div className="thumb">
                                     <a href="#">
-                                       <img class="img-fluid" src="img/post/preview.png" alt="" />
+                                       <img className="img-fluid" src="img/post/preview.png" alt="" />
                                     </a>
                                  </div>
-                                 <div class="arrow">
+                                 <div className="arrow">
                                     <a href="#">
-                              
+
                                     </a>
                                  </div>
                               </div>
-                              
+
                            </div>
                         </div>
                      </div>
-                     <div class="blog-author">
-                        <div class="media align-items-center">
+                     <div className="blog-author">
+                        <div className="media align-items-center">
                            <img src="/assets/images/shola.png" alt="" />
-                           <div class="media-body">
+                           <div className="media-body">
                               <a href="#">
                                  <h4>Saumya Chaturvedi</h4>
                               </a>
                               <p>A socially distraught feline creature, just writing the gloom away. You want in on the action?</p>
                            </div>
                         </div>
-                     </div>                     
+                     </div>
                </div>
             </div>
          </section>
@@ -81,7 +81,7 @@ export default class CanYouSeeMeBlog extends Component {
 
     render () {
         return(
-            <div> 
+            <div>
                 {this.renderBlogContent()}
                 </div>
         )

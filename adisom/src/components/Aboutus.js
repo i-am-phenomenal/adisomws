@@ -17,6 +17,7 @@ import {
 from 'reactstrap';
 import SideMenu from './SideMenu';
 import '../App.css';
+import {FaQuoteLeft, FaQuoteRight} from 'react-icons/fa';
 
 export default class AboutUsView extends Component {
     constructor(props) {
@@ -254,33 +255,29 @@ export default class AboutUsView extends Component {
             <div class="row">
                 <div class="col-xl-12">
                     <div class="about_info">
-                        <h3>We are Global Non-profit NGO to help people <br />
-                            To make a better World</h3>
+                        <h3> <FaQuoteLeft /> Sustainability, social equality and the environment are now business problems
+                        and corporate leaders can't depend on governments to solve them. <FaQuoteRight />  </h3>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xl-6 col-md-6">
                     <div class="about_text_info">
-                        <p>According to the research firm Frost & Sullivan, the estimated size of the North
-                            American used test and measurement equipment market was $446.4 million
-                            in 2004 and is estimated to grow to $654.5 million by 2011. For over 50 years,
-                            companies and governments have procured used test and measurement
-                            instruments.</p>
-                        <p>According to the research firm Frost & Sullivan, the estimated size of the North
-                            American used test and measurement equipment market was $446.4 million
-                            in 2004 and is estimated to grow to $654.5 million by 2011. For over 50 years,
-                            companies and governments have procured used test and measurement
-                            instruments.</p>
+                        <p>Inspired by Senge's philosophy,  a group of young corporate professionals came together in 2020
+                            to set up Adisom Welfare Foundation to work with grassroots initiatives for effecting positive changes in the lives of underprivileged
+                             children, their families and communities. </p>
+
+                        <p>We work as a catalyst in bringing sustainable change in the lives of underprivileged children, youth and women, with a life-cycle approach of development. 
+                                We also try to enable the civil society across the world to engage proactively in the change process through the philosophy of civic driven change.
+                                Along with that, one of our primary focus is to adopt highest standards of governance to emerge as a leading knowledge and technology driven, innovative and scalable international development organisation. </p>
                     </div>
                 </div>
                 <div class="col-xl-6 col-md-6">
                     <div class="about_text_info">
-                        <p>According to the research firm Frost & Sullivan, the estimated size of the North
-                            American used test and measurement equipment market was $446.4 million
-                            in 2004 and is estimated to grow to $654.5 million by 2011. For over 50 years,
-                            companies and governments have procured used test and measurement
-                            instruments.</p>
+                        <p> 
+                            Adisom Welfare Foundation is to empower underprivileged children, youth and women through relevant education, innovative healthcare and market-focused livelihood programmes.
+                            Adisom Welfare Foundation is to deploy best possible methodology and technology for achieving ideal SROI (Social Return on Investment), to practice and promote good governance. To link business competitiveness of the corporate with social development initiatives; also to sensitize privileged children, youth and citizens in general to promote Civic Driven Change.
+                            </p>
                     </div>
                 </div>
             </div>

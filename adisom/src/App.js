@@ -176,9 +176,9 @@ export default class App extends Component {
                           <div class="about_thumb">
                               <img src="/assets/images/about.png" alt="" />
                               <div class="served_over">
-                                  <span>Served Over</span>
+                                  <span>SERVED OVER</span>
                                   <h3>1000+ </h3>
-                                  <p>people over more than 50 locations</p>
+                                  <p>PEOPLE DURING THE COVID-19 PANDEMIC </p>
                               </div>
                           </div>
                       </div>
@@ -187,19 +187,17 @@ export default class App extends Component {
                               <div class="section_title">
                                   <span>About Us</span>
                                   <h3>
-                                      We’ve helped 1000+ people <br/>
-                                      with food and basic amenities <br/>
-                                      across various locations  <br/>
-                                      in New Delhi during Covid-19 pandemic
+                                  One for all, all for better, together for the best.
                                   </h3>
                               </div>
-                              <p>  
-                                During the Covid-19 pandemic, we at Adisom Welfare Foundation supplied basic amenities <br /> 
-                                like food and medicines to people who worked for daily wages but were not able to do so  <br /> 
-                                because of the lockdown measures taken by our government. <br /> 
-                                We do this to inspire other people and spread a message across various communities that together < br/> 
-                                we can make a difference 
-                              </p>
+                              <p> 
+                              < br /> 
+                                    In times of undulating and unpredictable pandemic, where everyone rightfully prioritizes individual safety, we found it optimum
+                                    to serve our country and our fellow brothers residing in not-so-opportune living conditions. < br />  < br /> Adisom Welfare Foundation works towards 
+                                    a variety of causes : provision of food, sanitary equipments, skill development and upliftment amongst necessary encouragement and financial support to small self-help
+                                    industries to flourish. In all this, the very core principal underlying this multi functional NGO onyl highligt one motto  "Violation of even one man's identity is a threat to 
+                                    every man's security."
+                                  </p>
                           </div>
                       </div>
                   </div>
@@ -229,8 +227,8 @@ export default class App extends Component {
                                   <GiHamburger />
                               </div>
                               <h3>Pure Food & Water</h3>
-                              <p>Inspires employees and organizations to support causes they care about. We do this to bring
-                                  more resources to the nonprofits that are </p>
+                              <p> A small lockdown sprouted initiative slowly expanded to one of our biggest expenditures in providing 
+                                  basic meal packets to unfortunate families in our neighbourhood and hospitals. </p> 
                           </div>
                       </div>
                       <div class="col-xl-4 col-md-4">
@@ -239,8 +237,7 @@ export default class App extends Component {
                                   <GiMedicines />
                               </div>
                               <h3>Medicine</h3>
-                              <p>Inspires employees and organizations to support causes they care about. We do this to bring
-                                  more resources to the nonprofits that are </p>
+                              <p>  This includes, but is not restricted to provision of sanitizers, health-care masks, gloves and decontamination sprays. </p> 
                           </div>
                       </div>
                       <div class="col-xl-4 col-md-4">
@@ -249,8 +246,8 @@ export default class App extends Component {
                                   <GiBookshelf />
                               </div>
                               <h3>Education</h3>
-                              <p>Inspires employees and organizations to support causes they care about. We do this to bring
-                                  more resources to the nonprofits that are </p>
+                              <p> We are devoted to spreading the light of education in dimly illuminated areas where it finds difficult to reach. 
+                                    We also support skill development for youth individuals. </p> 
                           </div>
                       </div>
                   </div>
@@ -331,11 +328,11 @@ export default class App extends Component {
                                 address
                             </h3>
                             <p class="footer_text">F-14/20, Krishna Nagar, Delhi-110051 <br />
-                                + 91 9582024729 <br />
-                                <a class="domain" href="#">testing.purposes.adisom@gmail.com</a></p>
+                                + 91 9873196224 <br />
+                                <a class="domain" href="#">adisomwelfaresociety@gmail.com</a></p>
                             <div class="socail_links">
                                 <ul>
-                                    <li>
+                                    are<li>f
                                         <a href="https://www.instagram.com/adisomwelfaresociety/">
                                             <FaFacebookSquare />
                                         </a>

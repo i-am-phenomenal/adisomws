@@ -77,7 +77,7 @@ export default class ContactUsView extends Component {
             } else {
                 let params = {
                     from_name: formParams.email,
-                    to_name: "testing.purposes.adisom@gmail.com",
+                    to_name: "adisomwelfaresociety@gmail.com",
                     subject: "QUERIES/SUGGESTIONS REGARDING ADISOM",
                     message_html: formParams.message
                 }
@@ -88,6 +88,15 @@ export default class ContactUsView extends Component {
                     params,
                     "user_yyzDCcAk71RHZpB1EpFTi"
                 )
+                alert("Email has been sent.");
+                let updatedFormDetails = {
+                    name: "",
+                    email: "",
+                    subject: "",
+                    message: ""
+                }
+        
+                this.setState({formParams: updatedFormDetails});
             }
     }
 

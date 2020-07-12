@@ -78,6 +78,72 @@ module.exports = {
     filename: 'bundle.js'
   },
 
+  module: {
+   rules: [
+     {
+       test: /\.css$/,
+       use: [
+         // style-loader
+         { loader: 'style-loader' },
+         // css-loader
+         {
+           loader: 'css-loader',
+           options: {
+             modules: true
+           }
+         },
+         // sass-loader
+         { loader: 'sass-loader' }
+       ]
+     }
+   ]
+ },
+
+//   module: {
+//     rules: [
+//     {
+//       test: /\.js$/,
+//       exclude: /(node_modules)/,
+//       use: {
+//         loader: 'babel-loader',
+//         options: {
+//           presets: ['@babel/preset-env']
+//         }
+//       }
+//     }
+// ]
+// },
+
+//     rules: [
+//     {
+//       test: /\.js$/,
+//       exclude: /(node_modules)/,
+//       use: [
+//              {
+//                // This loader resolves url() and @imports inside CSS
+//                loader: "css-loader",
+//              },
+//              {
+//                // Then we apply postCSS fixes like autoprefixer and minifying
+//                loader: "postcss-loader"
+//              },
+//              {
+//                // First we transform SASS to standard CSS
+//                loader: "sass-loader",
+//                options: {
+//                  implementation: require("sass")
+//                }
+//              }
+//            ]
+//       // use: {
+//       //   loader: 'babel-loader',
+//       //   options: {
+//       //     presets: ['@babel/preset-env']
+//       //   }
+//       // }
+//     }
+// ]
+
   // Default mode for Webpack is production.
   // Depending on mode Webpack will apply different things
   // on final bundle. For now we don't need production's JavaScript

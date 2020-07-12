@@ -9,6 +9,7 @@
   "dependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.10.4",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
     "@babel/preset-react": "^7.10.4",
     "@svgr/webpack": "4.3.3",
     "@testing-library/jest-dom": "^4.2.4",
@@ -85,7 +86,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "webpack --config webpack.config.js",
+    "build": "set NODE_ENV=production&& webpack --config webpack.config.js",
     "test": "react-scripts test --env=jsdom",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "eject": "react-scripts eject",
@@ -159,7 +160,7 @@
   "babel": {
     "presets": [
       "react-app",
-      "es2015"
+      "@babel/preset-env"
     ]
   }
 }

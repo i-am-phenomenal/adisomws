@@ -24,7 +24,8 @@ import {
 import {
   FaFacebookSquare,
   FaTwitter,
-  FaInstagramSquare
+  FaInstagramSquare,
+  FaMedium
 } from 'react-icons/fa';
 
 import './components/scss/_about.scss';
@@ -313,14 +314,43 @@ export default class App extends Component {
             <div class="container">
                 <div class="row">
                     <div class="col-xl-3 col-md-6 col-lg-3">
-                        <div class="footer_widget">
+                    <div class="footer_widget">
+                            <h3 class="footer_title">
+                               Follow us 
+                            </h3>
+                            </div> 
+                    <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/adisomsociety/" title="Facebook">
+                                            <FaFacebookSquare />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.twitter.com/adisomsociety" title="Twitter">
+                                            <FaTwitter />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/adisomwelfaresociety/" title="Instagram">
+                                            <FaInstagramSquare /> 
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.medium.com/@chaturvedipriyanka6224/" title="Medium">
+                                            <FaMedium /> 
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        {/* <div class="footer_widget">
                             <h3 class="footer_title">
                                 Join With Us
                             </h3>
                             <p class="footer_text doanar"> <a class="first" href="#">Become a Volunteer</a> <br /><a
                                     href="#">Become a Donor</a></p>
 
-                        </div>
+                        </div> */}
                     </div>
                     <div class="col-xl-3 col-md-6 col-lg-3">
                         <div class="footer_widget">
@@ -330,25 +360,7 @@ export default class App extends Component {
                             <p class="footer_text">F-14/20, Krishna Nagar, Delhi-110051 <br />
                                 + 91 9873196224 <br />
                                 <a class="domain" href="#">adisomwelfaresociety@gmail.com</a></p>
-                            <div class="socail_links">
-                                <ul>
-                                    are<li>f
-                                        <a href="https://www.instagram.com/adisomwelfaresociety/">
-                                            <FaFacebookSquare />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <FaTwitter />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <FaInstagramSquare /> 
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="col-xl-2 col-md-6 col-lg-2">

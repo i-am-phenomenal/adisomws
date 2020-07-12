@@ -73,7 +73,7 @@ export default class BlogView extends Component {
                                 <div class="blog_item_img">
                                     <img 
                                         class="card-img rounded-0" 
-                                        src="/assets/images/blog/single_blog_1.png" 
+                                        src="/assets/images/blog/corona.png" 
                                         alt="" 
                                         />
                                     <a href="#" class="blog_item_date">
@@ -99,7 +99,7 @@ export default class BlogView extends Component {
                                 <div class="blog_item_img">
                                     <img 
                                         class="card-img rounded-0" 
-                                        src="/assets/images/blog/single_blog_2.png" 
+                                        src="/assets/images/blog/perception.png" 
                                         alt="" 
                                         />
                                     <a href="/blogs/perception_of_memory/" class="blog_item_date">
@@ -121,7 +121,7 @@ export default class BlogView extends Component {
     
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="/assets/images/blog/single_blog_3.png"  alt="" />
+                                    <img class="card-img rounded-0" src="/assets/images/blog/ode.png"  alt="" />
                                     <a href="#" class="blog_item_date">
                                         <h3>15</h3>
                                         <p>Jan</p>
@@ -141,7 +141,7 @@ export default class BlogView extends Component {
     
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="/assets/images/blog/single_blog_4.png"  alt="" />
+                                    <img class="card-img rounded-0" src="/assets/images/blog/see_me.png"  alt="" />
                                     <a href="#" class="blog_item_date">
                                         <h3>15</h3>
                                         <p>Jan</p>
@@ -155,7 +155,6 @@ export default class BlogView extends Component {
                                     <p>I’m just another irrelevant human being residing on this planet of rock and gas, for an extremely short mortal time. But until I perish, like all, I must strive to prove my point and work towards my purpose. Now isn’t that what life is all about?</p>
                                     <ul class="blog-info-link">
                                         <li><a href="#"><i class="fa fa-user"></i> Introduction, Creative Writing, Poetry, Imagination </a></li>
-                                        <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
                                     </ul>
                                 </div>
                             </article>

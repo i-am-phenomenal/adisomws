@@ -72,10 +72,10 @@ The deadly cloak of a fatal virus covers the globe. COVID-19, a variant of the p
                      </div>
                      <div class="blog-author">
                         <div class="media align-items-center">
-                           <img src="/assets/images/author.png" alt="" />
+                           <img src="/assets/images/shola.png" alt="" />
                            <div class="media-body">
                               <a href="#">
-                                 <h4>Harvard milan</h4>
+                                 <h4>Saumya Chaturvedi</h4>
                               </a>
                               <p>A socially distraught feline creature, just writing the gloom away. You want in on the action?</p>
                            </div>

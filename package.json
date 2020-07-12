@@ -81,7 +81,8 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "eject": "react-scripts eject",
-    "postinstall": "npm run build"
+    "heroku-postbuild": "ng build --prod",
+    
   },
   "eslintConfig": {
     "extends": "react-app"

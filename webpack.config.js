@@ -60,7 +60,7 @@
 //     ]
 // };
 
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // Webpack uses this to work with directories
 const path = require('path');
 
@@ -77,27 +77,99 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
-
   module: {
-   rules: [
-     {
-       test: /\.css$/,
-       use: [
-         // style-loader
-         { loader: 'style-loader' },
-         // css-loader
-         {
-           loader: 'css-loader',
-           options: {
-             modules: true
-           }
-         },
-         // sass-loader
-         { loader: 'sass-loader' }
-       ]
-     }
-   ]
- },
+  rules: [
+    {
+      test: /\.css$/,
+      use: [
+        'style-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 1,
+            modules: true
+          }
+        }
+      ],
+      include: /\.module\.css$/
+    },
+    {
+      test: /\.css$/,
+      use: [
+        'style-loader',
+        'css-loader'
+      ],
+      exclude: /\.module\.css$/
+    },
+    {
+      test: /\.js$/,
+      exclude: /(node_modules)/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ["@babel/preset-env", "@babel/preset-react"]
+        }
+      }
+    },
+    {
+      test: /\.s[ac]ss$/i,
+      use: [
+        'style-loader',
+        'css-loader',
+        {
+          loader: 'sass-loader',
+          options: {
+            // Prefer `dart-sass`
+            implementation: require('sass'),
+          },
+        },
+      ],
+    },
+    {
+      test: /\.(png|jpe?g|gif)$/i,
+      use: [
+        {
+          loader: 'file-loader',
+        },
+      ],
+    },
+  ]
+},
+
+ //  module: {
+ //   rules: [
+ //     {
+ //       test: /\.css$/,
+ //       use: [
+ //          MiniCssExtractPlugin.loader,
+ //         'css-loader'
+ //       ]
+ //     }
+ //   ]
+ // },
+ // plugins: [
+ //   new MiniCssExtractPlugin(),
+ // ],
+ //  module: {
+ //   rules: [
+ //     {
+ //       test: /\.css$/,
+ //       use: [
+ //         // style-loader
+ //         { loader: 'style-loader' },
+ //         // css-loader
+ //         {
+ //           loader: 'css-loader',
+ //           options: {
+ //             modules: true
+ //           }
+ //         },
+ //         // sass-loader
+ //         { loader: 'sass-loader' },
+ //       ]
+ //     }
+ //   ]
+ // },
 
 //   module: {
 //     rules: [

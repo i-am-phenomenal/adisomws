@@ -90,6 +90,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "set NODE_ENV=production&& webpack --config webpack.config.js",
+    "build:prod": "NODE_ENV=production",
     "test": "react-scripts test --env=jsdom",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "eject": "react-scripts eject",

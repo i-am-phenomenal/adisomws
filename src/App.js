@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import NavigationBar from './components/NavigationBar/NavigationBar.component';
+// import NavigationBar from './components/NavigationBar/NavigationBar.component';
 import {
   BrowserRouter as Router,
   Switch,
@@ -65,9 +65,9 @@ export default class App extends Component {
         window.removeEventListener('scroll', this.handlePageScroll);
       }
 
-      renderNavBar = () => {
-        return( <NavigationBar /> )
-      }
+      // renderNavBar = () => {
+      //   return( <NavigationBar /> )
+      // }
 
       renderSwitch = () => {
         return(

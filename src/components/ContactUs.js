@@ -407,6 +407,31 @@ export default class ContactUsView extends Component {
                         </div>
                     </div>
                 </div>
+
+                
+                <div className="col-xl-3 col-md-6">
+                    <div className="single_volunteer">
+                        <div className="thumb">
+                            <img src="/assets/images/Adisom/Member_6.jpg" alt="" height="200" width="300" />
+                        </div>
+                        <div className="author_name text-center">
+                            <h3>Mr Vikas Tyagi</h3>
+                            <span>General Secretary</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-xl-3 col-md-6">
+                    <div className="single_volunteer">
+                        <div className="thumb">
+                            <img src="/assets/images/Adisom/Member_5.jpg" alt="" height="200" width="300" />
+                        </div>
+                        <div className="author_name text-center">
+                            <h3>Mrs Ranjana Sawai</h3>
+                            <span>Member</span>
+                        </div>
+                    </div>
+                </div>
                 <div className="col-xl-3 col-md-6">
                     <div className="single_volunteer">
                         <div className="thumb">

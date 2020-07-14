@@ -43,6 +43,7 @@
     "file-loader": "4.3.0",
     "fs-extra": "^8.1.0",
     "google-maps-react": "^2.0.2",
+    "heroku-logger": "^0.3.3",
     "html-webpack-plugin": "4.0.0-beta.11",
     "identity-obj-proxy": "3.0.0",
     "jest": "24.9.0",
@@ -86,16 +87,16 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "3.10.3",
     "webpack-manifest-plugin": "2.2.0",
+    "winston": "^3.3.3",
     "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "set NODE_ENV=production&& webpack --config webpack.config.js",
+    "build": "set NODE_ENV=production&& react-scripts build",
     "build:prod": "NODE_ENV=production",
     "test": "react-scripts test --env=jsdom",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
-    "eject": "react-scripts eject",
-    "postbuild": "postcss --use postcss-custom-properties --replace build/**/*.css"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

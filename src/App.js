@@ -6,6 +6,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import {createBrowserHistory} from "history";
 import AboutUsView from "./components/Aboutus";
 import ContactUsView from "./components/ContactUs";
 import OurWorkView from "./components/OurWork";
@@ -106,47 +107,48 @@ export default class App extends Component {
       }
 
       getUpdatedBannerText = () => {
-          let currentWindow = window.location.href.split("/").reverse()[1];
+          const history = createBrowserHistory();
+          let currentWindow = history.location.pathname;
 
           switch (currentWindow) {
-                case "about_us":
+                case "/about_us/":
                     return (
                         <h3> About Us </h3>
                         )
                     break;
 
-                case "blog":
+                case "/blog/":
                     return (
                         <h3>Blog</h3>
                     )
                     break;
 
-                case "contact_us":
+                case "/contact_us/":
                     return (
                         <h3> Contact Us </h3>
                     )
                     break;
 
-                case "gallery":
+                case "/gallery/":
                     return(
                         <h3> Gallery </h3>
                     )
                     break;
 
-                case "localhost:3000":
-                    return(
-                        <div>
-                            <h3>Support the Causes <br />
-                                    You Care About</h3>
-                                <p>At Adisom Welfare Foundation we believe that everyone has the right to be <br />
-                                    cared for and the right to be protected </p>
-                        </div>
-                    )
-                    break;
+                case "/":
+                      return(
+                          <div>
+                              <h3>Support the Causes <br />
+                                      You Care About</h3>
+                                  <p>At Adisom Welfare Foundation we believe that everyone has the right to be <br />
+                                      cared for and the right to be protected </p>
+                          </div>
+                      )
+                      break;
 
                 default:
-                        return("")
-                        break
+                  return("")
+                  break;
           }
       }
 
@@ -408,8 +410,10 @@ export default class App extends Component {
         }
 
         renderConditionally = () => {
-          let currentPage = window.location.href.split("/").reverse()[1];
-          if (currentPage == "localhost:3000") {
+          const history = createBrowserHistory()
+          let currentPage = history.location.pathname;
+
+          if (currentPage == "/") {
             return(
               <div>
                     {this.renderAboutUsInfo()}

@@ -17,6 +17,7 @@ import {
     Col
 }
 from "reactstrap";
+import Image from 'react-bootstrap/Image'
 import * as emailjs from "emailjs-com";
 import MapContainer from './MapContainer';
 
@@ -44,7 +45,6 @@ export default class ContactUsView extends Component {
                     <CardBody>
                     <CardTitle> <h3>  <b>FOR ALL GENERAL QUERIES  </b> </h3> </CardTitle>
                     <CardSubtitle>testing.purposes.adisom@gmail.com</CardSubtitle>
-                    {/* <CardText>A text like i would be very happy to resolve your queries .... </CardText> */}
                     <br />
                     <CardTitle> <h3>  <b> DONATION RELATED QUERIES </b> </h3> </CardTitle>
                     <CardTitle> Name of the appropriate person -> Firstname Last Name </CardTitle>
@@ -376,14 +376,8 @@ export default class ContactUsView extends Component {
                 <div className="col-xl-3 col-md-6">
                     <div className="single_volunteer">
                         <div className="thumb">
-                            <img src="/assets/images/Adisom/Member_1.jpg" alt="" />
-                            {/* <div className="social_links">
-                                <ul>
-                                    <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-linkedin-square"></i></a></li>
-                                </ul>
-                            </div> */}
+                            <Image src="/assets/images/Adisom/Member_1.jpg" alt="" height="200" width="300" >
+                            </Image>
                         </div>
                         <div className="author_name text-center">
                             <h3>Mrs Priyanka Chaturvedi </h3>
@@ -394,14 +388,7 @@ export default class ContactUsView extends Component {
                 <div className="col-xl-3 col-md-6">
                     <div className="single_volunteer">
                         <div className="thumb">
-                            <img src="/assets/images/Adisom/Member_2.jpg" alt="" />
-                            {/* <div className="social_links">
-                                <ul>
-                                    <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-linkedin-square"></i></a></li>
-                                </ul>
-                            </div> */}
+                            <img src="/assets/images/Adisom/Member_2.jpg" alt="" height="200" width="300" />
                         </div>
                         <div className="author_name text-center">
                             <h3>Mr Atul Kumar</h3>
@@ -412,14 +399,7 @@ export default class ContactUsView extends Component {
                 <div className="col-xl-3 col-md-6">
                     <div className="single_volunteer">
                         <div className="thumb">
-                            <img src="/assets/images/Adisom/Member_3.jpg" alt="" />
-                            {/* <div className="social_links">
-                                <ul>
-                                    <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-linkedin-square"></i></a></li>
-                                </ul>
-                            </div> */}
+                            <img src="/assets/images/Adisom/Member_3.jpg" alt="" height="200" width="300" />
                         </div>
                         <div className="author_name text-center">
                             <h3>Ms Priya Chaturvedi</h3>
@@ -430,14 +410,7 @@ export default class ContactUsView extends Component {
                 <div className="col-xl-3 col-md-6">
                     <div className="single_volunteer">
                         <div className="thumb">
-                            <img src="/assets/images/Adisom/Member_4.jpg" alt="" />
-                            {/* <div className="social_links">
-                                <ul>
-                                    <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-linkedin-square"></i></a></li>
-                                </ul>
-                            </div> */}
+                            <img src="/assets/images/Adisom/Member_4.jpg" alt="" height="200" width="300" />
                         </div>
                         <div className="author_name text-center">
                             <h3>Mrs Sunita Sharma</h3>

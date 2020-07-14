@@ -180,7 +180,7 @@ export default class App extends Component {
                               <img src="/assets/images/about.png" alt="" />
                               <div className="served_over">
                                   <span>SERVED OVER</span>
-                                  <h3>1000+ </h3>
+                                  <h3>10000+ </h3>
                                   <p>PEOPLE DURING THE COVID-19 PANDEMIC </p>
                               </div>
                           </div>

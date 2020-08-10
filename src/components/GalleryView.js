@@ -240,6 +240,107 @@ export default class GalleryView extends Component {
               </div>
 						</a>
 					</div>
+
+        	<div className="col-md-6">
+						<a href="/assets/images/Adisom/w_19.jpg" className="img-pop-up">
+              <div
+              className="single-gallery-image"
+              style={{background: "url(/assets/images/Adisom/w_19.jpg)"}}
+              >
+              </div>
+						</a>
+					</div>
+
+          <div className="col-md-6">
+						<a href="/assets/images/Adisom/w_20.jpg" className="img-pop-up">
+              <div
+              className="single-gallery-image"
+              style={{background: "url(/assets/images/Adisom/w_20.jpg)"}}
+              >
+              </div>
+						</a>
+					</div>
+
+          <div className="col-md-4">
+						<a href="/assets/images/Adisom/w_21.jpg" className="img-pop-up">
+              <div
+              className="single-gallery-image"
+              style={{background: "url(/assets/images/Adisom/w_21.jpg)"}}
+              >
+              </div>
+						</a>
+					</div>
+
+          <div className="col-md-4">
+						<a href="/assets/images/Adisom/w_22.jpg" className="img-pop-up">
+              <div
+              className="single-gallery-image"
+              style={{background: "url(/assets/images/Adisom/w_22.jpg)"}}
+              >
+              </div>
+						</a>
+					</div>
+
+          <div className="col-md-4">
+						<a href="/assets/images/Adisom/w_23.jpg" className="img-pop-up">
+              <div
+              className="single-gallery-image"
+              style={{background: "url(/assets/images/Adisom/w_23.jpg)"}}
+              >
+              </div>
+						</a>
+					</div>
+
+          <div className="col-md-6">
+						<a href="/assets/images/Adisom/w_24.jpg" className="img-pop-up">
+              <div
+              className="single-gallery-image"
+              style={{background: "url(/assets/images/Adisom/w_24.jpg)"}}
+              >
+              </div>
+						</a>
+					</div>
+
+          <div className="col-md-6">
+						<a href="/assets/images/Adisom/w_25.jpg" className="img-pop-up">
+              <div
+              className="single-gallery-image"
+              style={{background: "url(/assets/images/Adisom/w_25.jpg)"}}
+              >
+              </div>
+						</a>
+					</div>
+
+          <div className="col-md-4">
+						<a href="/assets/images/Adisom/w_26.jpg" className="img-pop-up">
+              <div
+              className="single-gallery-image"
+              style={{background: "url(/assets/images/Adisom/w_26.jpg)"}}
+              >
+              </div>
+						</a>
+					</div>
+
+          <div className="col-md-4">
+						<a href="/assets/images/Adisom/w_27.jpg" className="img-pop-up">
+              <div
+              className="single-gallery-image"
+              style={{background: "url(/assets/images/Adisom/w_27.jpg)"}}
+              >
+              </div>
+						</a>
+					</div>
+
+          <div className="col-md-4">
+						<a href="/assets/images/Adisom/w_28.jpg" className="img-pop-up">
+              <div
+              className="single-gallery-image"
+              style={{background: "url(/assets/images/Adisom/w_28.jpg)"}}
+              >
+              </div>
+						</a>
+					</div>
+
 				</div>
 			</div>
       )

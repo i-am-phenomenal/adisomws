@@ -140,7 +140,7 @@ export default class App extends Component {
                           <div>
                               <h3>Support the Causes <br />
                                       You Care About</h3>
-                                  <p>At Adisom Welfare Foundation we believe that everyone has the right to be <br />
+                                  <p>At Adisom Welfare Society we believe that everyone has the right to be <br />
                                       cared for and the right to be protected </p>
                           </div>
                       )
@@ -180,7 +180,7 @@ export default class App extends Component {
                               <img src="/assets/images/about.png" alt="" />
                               <div className="served_over">
                                   <span>SERVED OVER</span>
-                                  <h3>10000+ </h3>
+                                  <h3>30000+ </h3>
                                   <p>PEOPLE DURING THE COVID-19 PANDEMIC </p>
                               </div>
                           </div>
@@ -196,7 +196,7 @@ export default class App extends Component {
                               <p>
                               < br />
                                     In times of undulating and unpredictable pandemic, where everyone rightfully prioritizes individual safety, we found it optimum
-                                    to serve our country and our fellow brothers residing in not-so-opportune living conditions. < br />  < br /> Adisom Welfare Foundation works towards
+                                    to serve our country and our fellow brothers residing in not-so-opportune living conditions. < br />  < br /> Adisom Welfare Society works towards
                                     a variety of causes : provision of food, sanitary equipments, skill development and upliftment amongst necessary encouragement and financial support to small self-help
                                     industries to flourish. In all this, the very core principal underlying this multi functional NGO onyl highligt one motto  "Violation of even one man's identity is a threat to
                                     every man's security."
